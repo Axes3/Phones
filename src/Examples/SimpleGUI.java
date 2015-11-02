@@ -64,7 +64,7 @@ public class SimpleGUI {
 		Outframe.add(Scroll);
 		Outframe.add(ScrollInfo);		
 
-		JFrame Main = new JFrame("KBS Conversation Bot");   // our main frame
+		JFrame Main = new JFrame("Phone Helpdesk");   // our main frame
 		
 		try {
     		Main.setContentPane(new JLabel(new ImageIcon(ImageIO.read(new File("test.jpg")))));
@@ -94,8 +94,8 @@ public class SimpleGUI {
 		Main.setVisible(true);                               // Don't forget
 		
 		dialoghistory.add("<H2>Welcome to the Library Helpdesk, please type your question.</H2> " +
-				          "<H3>I can inform you about: The library, its books, its members and " +
-				          "the current lendings. Just ask me.</H3><br>");
+				          "<H3>I can inform you about: The Phones, Tablets, and its reviews" +
+				          "Just ask me.</H3><br>");
 		
 		Output.setText(dialoghistory.firstElement());
 		Input.requestFocusInWindow();
