@@ -1,5 +1,12 @@
 <!--  Our one element xml document, describing one instance of a Library object -->
+<myPossiblePhones>
+	<name></name>
+	<city></city>
+	<street></street>
+	<housenumber></housenumber>
+	<postcode></postcode>
 
+</myPossiblePhones>
 <mylibrary>      <!-- the one libraryobject conatining all the info -->
 
 	<name>UWL Library</name>            <!--  here follow all attributes of the mylibrary object -->
