@@ -70,18 +70,31 @@
 	    <haslend>55</haslend>
 	</Member>
 	
-	<Catalog>
-		<name>scifibooks</name>
-		<url>www.somwhere.uk/scifi</url>
-		<location>upper storie left</location>
-		<Books>12345Sn4567#375954Fe4567#</Books>
-	</Catalog>
-	<Catalog>
-		<name>boringbooks</name>
-		<url>www.somwhere.uk/boring</url>
-		<location>lower storie right</location>
-		<Books>12345Sn#</Books>
-	</Catalog>
+	<Review>
+		<reviewID>0001</reviewID>
+		<customerID>0001</customerID>
+		<reviewDescription>"IPHONES <3" </reviewDescription>
+		
+	</Review>
+	<Review>
+		<reviewID>0002</reviewID>
+		<customerID>0001</customerID>
+		<reviewDescription>"There are not enough buttons" </reviewDescription>
+		
+	</Review>
+	<Review>
+		<reviewID>0001</reviewID>
+		<customerID>0002</customerID>
+		<reviewDescription>"Too confusing, " </reviewDescription>
+		
+	</Review>
+	<Review>
+		<reviewID>0002</reviewID>
+		<customerID>0002</customerID>
+		<reviewDescription>"Samsung :D!!!!!" </reviewDescription>
+		
+	</Review>
+
 	
 	<Lending>
 		<lendid>001</lendid>
