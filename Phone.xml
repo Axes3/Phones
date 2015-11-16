@@ -1,41 +1,13 @@
 <!--  Our one element xml document, describing one instance of a Library object -->
-<myPossiblePhones>
-	<name></name>
-	<city></city>
-	<street></street>
-	<housenumber></housenumber>
-	<postcode></postcode>
 
-</myPossiblePhones>
-<mylibrary>      <!-- the one libraryobject conatining all the info -->
+<myPossiblePhones>      <!-- the one libraryobject conatining all the info -->
 
-	<name>UWL Library</name>            <!--  here follow all attributes of the mylibrary object -->
-	<city>Ealing</city>
-	<street>St Marys Road</street>
-	<housenumber>11</housenumber>
-	<postcode>W 13</postcode>	
+	<name>Nowhere</name>            <!--  here follow all attributes of the mylibrary object -->
+	<city>That City</city>
+	<street>Dat Street</street>
+	<housenumber>Nam</housenumber>
+	<postcode>POSTOOOCODEEE</postcode>	
 	
-	<Book>                                       <!-- An Instance of a book -->
-		<autor>Dostoyjewski</autor>              <!-- And its attributes -->
-		<title>War and Peace</title>
-		<isbn>12345Sn</isbn>
-		<location>shelf 3 row 4</location>
-		<islend>001</islend>
-	</Book>
-	<Book>
-		<autor>Herbert George Wells</autor>
-		<title>The war of the worlds</title>
-		<isbn>12345Sn4567</isbn>
-		<location>shelf 4 row 5</location>
-		<islend>null</islend>
-	</Book>
-	<Book>
-		<autor>Herbert George Wells</autor>
-		<title>The time machine</title>
-		<isbn>375954Fe4599</isbn>
-		<location>shelf 7 row 11</location>
-		<islend>null</islend>
-	</Book>
 	
 	<Member>
 		<surname>Joe</surname>
@@ -59,8 +31,7 @@
 		<city>Ealing</city>
 		<street>Cairn Road</street>
 		<housenumber>17</housenumber>
-		<postcode>W 14</postcode>	
-	    
+		<postcode>W 14</postcode>
 	    <haslend>001</haslend>
 	</Member>
 	<Member>
@@ -79,7 +50,7 @@
 	
 	<Review>
 		<reviewID>0001</reviewID>
-		<customerID>0001</customerID>
+		<!--Foreign Key--><customerID>0001</customerID>
 		<reviewDescription>"IPHONES <3" </reviewDescription>
 		
 	</Review>
@@ -99,10 +70,19 @@
 		<reviewID>0002</reviewID>
 		<customerID>0002</customerID>
 		<reviewDescription>"Samsung :D!!!!!" </reviewDescription>
-		
 	</Review>
-
+	<Customer>
 	
+	<CustomerID>0001</CustomerID> 
+			<Firstname>Face</Firstname>
+			<Lastname>Buck</Lastname>
+			<Address>123 Yeehaw Ln</Address>
+	</Customer>
+	<CustomerID>0002</CustomerID> 
+			<Firstname>Face</Firstname>
+			<Lastname>Buck</Lastname>
+			<Address>123 Yeehaw Ln</Address>
+	</Customer>
 	<Lending>
 		<lendid>001</lendid>
 		<memberid>S_SO_68</memberid>
