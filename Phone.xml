@@ -68,7 +68,7 @@
 	</Review>
 	
 	<Product>								<!-- An Instance of a Product -->
-		<productID><productID>				<!-- And its attributes -->
+		<pID><pID>				<!-- And its attributes -->
 		<name></name>
 		<description|></description>
 		<cost></cost>
@@ -77,7 +77,7 @@
 	</Product>
 
 	<Product>
-		<productID><productID>
+		<pID><pID>
 		<name></name>
 		<description|></description>
 		<cost></cost>
@@ -86,7 +86,7 @@
 	</Product>
 
 	<phone>									<!-- An Instance of a Phone -->
-		<productID></productID>				<!-- And its attributes -->
+		<pID></pID>				<!-- And its attributes -->
 		<OS></OS>
 		<colour></Colour>
 		<capacity></capacity>
@@ -95,7 +95,7 @@
 	</phone>
 	
 	<phone>
-		<productID></productID>
+		<pID></pID>
 		<OS></OS>
 		<colour></Colour>
 		<capacity></capacity>
@@ -104,7 +104,7 @@
 	</phone>
 	
 	<tablet>								<!-- An Instance of a tablet-->
-		<productID></productID>				<!-- And its attributes -->
+		<pID></pID>				<!-- And its attributes -->
 		<celluardata></celluardata>
 		<camerapiexels></camerapiexels>
 		<battery></battery>
@@ -114,7 +114,7 @@
 	</tablet>
 	
 	<tablet>
-		<productID></productID>
+		<pID></pID>
 		<celluardata></celluardata>
 		<camerapiexels></camerapiexels>
 		<battery></battery>
