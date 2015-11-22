@@ -8,102 +8,83 @@
 	<housenumber>Nam</housenumber>
 	<postcode>POSTOOOCODEEE</postcode>	
 	
+	<Customer>
+		<customerID>0001</customerID> 					<!-- An Instance of a Customer -->
+		<Firstname>Face</Firstname>             <!-- And its attributes -->
+		<surname>Buck</surname>
+		<Address>123 Yeehaw Ln</Address>
+	</Customer>
 	
-	<Member>							<!-- An Instance of a member -->
-		<autor>Dostoyjewski</autor>     <!-- And its attributes -->
-		<surname>Joe</surname>
-		<lastname>Average</lastname>
-		<age>25</age>
-		<memberid>J_AV_25</memberid>
-		
-		<city>London</city>
-		<street>Bond Street</street>
-		<housenumber>14</housenumber>
-		<postcode>L 7</postcode>	
-	  
-	    <haslend>null</haslend>
-	</Member>
-	<Member>
-		<surname>Susan</surname>
-		<lastname>Someone</lastname>
-		<age>68</age>
-		<memberid>S_SO_68</memberid>
-		
-		<city>Ealing</city>
-		<street>Cairn Road</street>
-		<housenumber>17</housenumber>
-		<postcode>W 14</postcode>
-	    <haslend>001</haslend>
-	</Member>
-	<Member>
-		<surname>Tim</surname>
-		<lastname>Buktu</lastname>
-		<age>18</age>
-		<memberid>T_BU_99</memberid>
-		
-		<city>Ealing</city>
-		<street>Uxbridge Road</street>
-		<housenumber>111</housenumber>
-		<postcode>W 22</postcode>	
-	    
-	    <haslend>55</haslend>
-	</Member>
+	<Customer>	
+	<customerID>0002</customerID> 
+		<Firstname>Face</Firstname>
+		<surname>Buck</surname>
+		<Address>123 Yeehaw Ln</Address>
+	</Customer>
+	
+	<Customer>
+		<customerID>0001</customerID>
+		<firstname>Joe</firstname>
+		<surname>Averaddress</surname>
+		<address>25 magical kingdom land</address>
+	</Customer>
+	
+	<Customer>
+		<customerID>0002</customerID>
+		<firstname>Susan</firstname>
+		<surname>Someone</surname>
+		<address>68 who knows where</address>
+	</Customer>
+	
+	<Customer>
+		<customerID>0003</customerID>
+		<firstname>Tim</firstname>
+		<surname>Buktu</surname>
+		<address>18 somewhere place</address>
+	</Customer>
 	
 	<Review>									 <!-- An Instance of a Review -->
-		<autor>Dostoyjewski</autor>              <!-- And its attributes -->
-		<reviewID>0001</reviewID>
+		<reviewID>0001</reviewID>         		 <!-- And its attributes -->
 		<!--Foreign Key--><customerID>0001</customerID>
 		<reviewDescription>"IPHONES <3" </reviewDescription>
-		
 	</Review>
+	
 	<Review>
 		<reviewID>0002</reviewID>
 		<customerID>0001</customerID>
 		<reviewDescription>"There are not enough buttons" </reviewDescription>
-		
 	</Review>
+	
 	<Review>
 		<reviewID>0001</reviewID>
 		<customerID>0002</customerID>
 		<reviewDescription>"Too confusing, " </reviewDescription>
-		
 	</Review>
+	
 	<Review>
 		<reviewID>0002</reviewID>
 		<customerID>0002</customerID>
 		<reviewDescription>"Samsung :D!!!!!" </reviewDescription>
 	</Review>
-	<Customer>
-	
-	<CustomerID>0001</CustomerID> 					<!-- An Instance of a Customer -->
-		<autor>Dostoyjewski</autor>                 <!-- And its attributes -->
-			<Firstname>Face</Firstname>
-			<Lastname>Buck</Lastname>
-			<Address>123 Yeehaw Ln</Address>
-	</Customer>
-	<CustomerID>0002</CustomerID> 
-			<Firstname>Face</Firstname>
-			<Lastname>Buck</Lastname>
-			<Address>123 Yeehaw Ln</Address>
-	</Customer>
+
 	<Lending>									<!-- An Instance of lending -->
 		<autor>Dostoyjewski</autor>              <!-- And its attributes -->
 		<lendid>001</lendid>
-		<memberid>S_SO_68</memberid>
+		<customerID>S_SO_68</customerID>
 		<isbn>12345Sn</isbn>
 		<startdate>01102011</startdate>
 		<enddate>22102011</enddate>	
 	</Lending>
 	<Lending>
 		<lendid>002</lendid>
-		<memberid>S_SO_68</memberid>
+		<customerID>S_SO_68</customerID>
 		<isbn>12345XZ</isbn>
 		<startdate>01102011</startdate>
 		<enddate>22102011</enddate>	
 	</Lending>
 	<Lending>
 		<lendid>003</lendid>
-		<memberid>S_SO_68</memberid>
+		<customerID>S_SO_68</customerID>
 		<isbn>0372</isbn>
 		<startdate>01102011</startdate>
 		<enddate>22102011</enddate>	
