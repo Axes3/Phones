@@ -9,7 +9,7 @@
 	<postcode>POSTOOOCODEEE</postcode>	
 	
 	<Customer>
-		<customerID>0001</customerID> 					<!-- An Instance of a Customer -->
+		<customerID>0001</customerID> 			<!-- An Instance of a Customer -->
 		<Firstname>Face</Firstname>             <!-- And its attributes -->
 		<surname>Buck</surname>
 		<Address>123 Yeehaw Ln</Address>
@@ -43,8 +43,8 @@
 		<address>18 somewhere place</address>
 	</Customer>
 	
-	<Review>									 <!-- An Instance of a Review -->
-		<reviewID>0001</reviewID>         		 <!-- And its attributes -->
+	<Review>											 <!-- An Instance of a Review -->
+		<reviewID>0001</reviewID>         				 <!-- And its attributes -->
 		<!--Foreign Key--><customerID>0001</customerID>
 		<reviewDescription>"IPHONES <3" </reviewDescription>
 	</Review>
@@ -67,8 +67,8 @@
 		<reviewDescription>"Samsung :D!!!!!" </reviewDescription>
 	</Review>
 	
-	<Product>
-		<productID><productID>
+	<Product>								<!-- An Instance of a Product -->
+		<productID><productID>				<!-- And its attributes -->
 		<name></name>
 		<description|></description>
 		<cost></cost>
@@ -85,8 +85,8 @@
 		<stock></stock>
 	</Product>
 
-	<phone>
-		<productID></productID>
+	<phone>									<!-- An Instance of a Phone -->
+		<productID></productID>				<!-- And its attributes -->
 		<OS></OS>
 		<colour></Colour>
 		<capacity></capacity>
@@ -103,8 +103,8 @@
 		<battery></battery>
 	</phone>
 	
-	<tablet>
-		<productID></productID>
+	<tablet>								<!-- An Instance of a tablet-->
+		<productID></productID>				<!-- And its attributes -->
 		<celluardata></celluardata>
 		<camerapiexels></camerapiexels>
 		<battery></battery>
