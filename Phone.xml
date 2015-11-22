@@ -66,28 +66,63 @@
 		<customerID>0002</customerID>
 		<reviewDescription>"Samsung :D!!!!!" </reviewDescription>
 	</Review>
+	
+	<Product>
+		<productID><productID>
+		<name></name>
+		<description|></description>
+		<cost></cost>
+		<brand></brand>
+		<stock></stock>
+	</Product>
 
-	<Lending>									<!-- An Instance of lending -->
-		<autor>Dostoyjewski</autor>              <!-- And its attributes -->
-		<lendid>001</lendid>
-		<customerID>S_SO_68</customerID>
-		<isbn>12345Sn</isbn>
-		<startdate>01102011</startdate>
-		<enddate>22102011</enddate>	
-	</Lending>
-	<Lending>
-		<lendid>002</lendid>
-		<customerID>S_SO_68</customerID>
-		<isbn>12345XZ</isbn>
-		<startdate>01102011</startdate>
-		<enddate>22102011</enddate>	
-	</Lending>
-	<Lending>
-		<lendid>003</lendid>
-		<customerID>S_SO_68</customerID>
-		<isbn>0372</isbn>
-		<startdate>01102011</startdate>
-		<enddate>22102011</enddate>	
-	</Lending>
+	<Product>
+		<productID><productID>
+		<name></name>
+		<description|></description>
+		<cost></cost>
+		<brand></brand>
+		<stock></stock>
+	</Product>
+
+	<phone>
+		<productID></productID>
+		<OS></OS>
+		<colour></Colour>
+		<capacity></capacity>
+		<camerapixels></camerapixels>
+		<battery></battery>
+	</phone>
+	
+	<phone>
+		<productID></productID>
+		<OS></OS>
+		<colour></Colour>
+		<capacity></capacity>
+		<camerapixels></camerapixels>
+		<battery></battery>
+	</phone>
+	
+	<tablet>
+		<productID></productID>
+		<celluardata></celluardata>
+		<camerapiexels></camerapiexels>
+		<battery></battery>
+		<OS></OS>
+		<capacity></capacity>
+		<colour></colour>
+	</tablet>
+	
+	<tablet>
+		<productID></productID>
+		<celluardata></celluardata>
+		<camerapiexels></camerapiexels>
+		<battery></battery>
+		<OS></OS>
+		<capacity></capacity>
+		<colour></colour>
+	</tablet>
+
+
 
 </mylibrary>     <!-- closing the one phoneobject containing all the info -->
