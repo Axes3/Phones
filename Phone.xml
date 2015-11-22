@@ -1,15 +1,16 @@
-<!--  Our one element xml document, describing one instance of a Library object -->
+<!--  Our one element xml document, describing one instance of a Phone object -->
 
-<myPossiblePhones>      <!-- the one libraryobject conatining all the info -->
+<myPossiblePhones>      <!-- the one phoneobject containing all the info -->
 
-	<name>Nowhere</name>            <!--  here follow all attributes of the mylibrary object -->
+	<name>Nowhere</name>            <!--  here follow all attributes of the phonesobject -->
 	<city>That City</city>
 	<street>Dat Street</street>
 	<housenumber>Nam</housenumber>
 	<postcode>POSTOOOCODEEE</postcode>	
 	
 	
-	<Member>
+	<Member>							<!-- An Instance of a member -->
+		<autor>Dostoyjewski</autor>     <!-- And its attributes -->
 		<surname>Joe</surname>
 		<lastname>Average</lastname>
 		<age>25</age>
@@ -48,7 +49,8 @@
 	    <haslend>55</haslend>
 	</Member>
 	
-	<Review>
+	<Review>									 <!-- An Instance of a Review -->
+		<autor>Dostoyjewski</autor>              <!-- And its attributes -->
 		<reviewID>0001</reviewID>
 		<!--Foreign Key--><customerID>0001</customerID>
 		<reviewDescription>"IPHONES <3" </reviewDescription>
@@ -73,7 +75,8 @@
 	</Review>
 	<Customer>
 	
-	<CustomerID>0001</CustomerID> 
+	<CustomerID>0001</CustomerID> 					<!-- An Instance of a Customer -->
+		<autor>Dostoyjewski</autor>                 <!-- And its attributes -->
 			<Firstname>Face</Firstname>
 			<Lastname>Buck</Lastname>
 			<Address>123 Yeehaw Ln</Address>
@@ -83,7 +86,8 @@
 			<Lastname>Buck</Lastname>
 			<Address>123 Yeehaw Ln</Address>
 	</Customer>
-	<Lending>
+	<Lending>									<!-- An Instance of lending -->
+		<autor>Dostoyjewski</autor>              <!-- And its attributes -->
 		<lendid>001</lendid>
 		<memberid>S_SO_68</memberid>
 		<isbn>12345Sn</isbn>
@@ -105,4 +109,4 @@
 		<enddate>22102011</enddate>	
 	</Lending>
 
-</mylibrary>     <!-- closing the one libraryobject conatining all the info -->
+</mylibrary>     <!-- closing the one phoneobject containing all the info -->
