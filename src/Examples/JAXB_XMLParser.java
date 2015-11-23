@@ -36,7 +36,7 @@ public class JAXB_XMLParser {
 		catch (JAXBException e) {
 		}
 	}
-	
+
 	// Instance objects and return a list with this objects in it
 	public PossiblePhones loadXML(InputStream fileinputstream) {
 
@@ -49,7 +49,7 @@ public class JAXB_XMLParser {
 				mynewPP = (PossiblePhones) (((JAXBElement) xmltoobject).getValue());
 				// The above (Library) is a candidate for a name change because you wont deal with 
 				// a library any more in your conversion
-				
+
 				return mynewPP; // return Library Object
 			}
 		} // try

@@ -68,59 +68,59 @@
 	</Review>
 	
 	<Product>								<!-- An Instance of a Product -->
-		<pID><pID>				<!-- And its attributes -->
-		<name></name>
-		<description|></description>
-		<cost></cost>
-		<brand></brand>
-		<stock></stock>
+		<pID>0001<pID>				<!-- And its attributes -->
+		<name>Hand Sling</name>
+		<description|>a rope connected to your hand and the phone, for not dropping it</description>
+		<cost> 2£</cost>
+		<brand>generic</brand>
+		<stock>100</stock>
 	</Product>
 
 	<Product>
-		<pID><pID>
-		<name></name>
-		<description|></description>
-		<cost></cost>
-		<brand></brand>
-		<stock></stock>
+		<pID>0002<pID>
+		<name>Hello kitty case</name>
+		<description|>protective phone case with theme</description>
+		<cost>10£</cost>
+		<brand>Hello kitty</brand>
+		<stock>12</stock>
 	</Product>
 
 	<phone>									<!-- An Instance of a Phone -->
-		<pID></pID>				<!-- And its attributes -->
-		<OS></OS>
-		<colour></Colour>
-		<capacity></capacity>
-		<camerapixels></camerapixels>
-		<battery></battery>
+		<pID>0003</pID>				<!-- And its attributes -->
+		<OS>Android</OS>
+		<colour>Black</Colour>
+		<capacity>64 Gb</capacity>
+		<camerapixels>8</camerapixels>
+		<battery>60 hours</battery>
 	</phone>
 	
 	<phone>
-		<pID></pID>
-		<OS></OS>
-		<colour></Colour>
-		<capacity></capacity>
-		<camerapixels></camerapixels>
-		<battery></battery>
+		<pID>0004</pID>
+		<OS>IoS</OS>
+		<colour>white</Colour>
+		<capacity>124Gb</capacity>
+		<camerapixels>12</camerapixels>
+		<battery>15 hours</battery>
 	</phone>
 	
 	<tablet>								<!-- An Instance of a tablet-->
-		<pID></pID>				<!-- And its attributes -->
-		<celluardata></celluardata>
-		<camerapiexels></camerapiexels>
-		<battery></battery>
-		<OS></OS>
-		<capacity></capacity>
-		<colour></colour>
+		<pID>0005</pID>				<!-- And its attributes -->
+		<celluardata>Unlimited</celluardata>
+		<camerapiexels>8</camerapiexels>
+		<battery>40 Hours</battery>
+		<OS>Android</OS>
+		<capacity>48 Gb</capacity>
+		<colour>blue</colour>
 	</tablet>
 	
 	<tablet>
-		<pID></pID>
-		<celluardata></celluardata>
-		<camerapiexels></camerapiexels>
-		<battery></battery>
-		<OS></OS>
-		<capacity></capacity>
-		<colour></colour>
+		<pID>0006</pID>
+		<celluardata>Unlimited</celluardata>
+		<camerapiexels>12</camerapiexels>
+		<battery>40hours</battery>
+		<OS>IoS</OS>
+		<capacity>64Gb</capacity>
+		<colour>red</colour>
 	</tablet>
 
 
