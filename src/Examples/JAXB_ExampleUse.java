@@ -21,7 +21,7 @@ public class JAXB_ExampleUse {
 
 		try {
 			FileInputStream readthatfile = new FileInputStream(xmlfiletoload);  // initiate input stream
-			xmlobjectlist = xmlhandler.loadXML(readthatfile);                   // execute parser, get list 
+			xmlobjectlist = xmlhandler.loadXML(readthatfile).getProduct();                   // execute parser, get list 
 			Iterator<Phone> gothruphone = xmlobjectlist.iterator();              // initiate iterator on list
 
 			// Remember: xmlobjectlist is our "product" object list, containing all product objects
