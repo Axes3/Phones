@@ -30,7 +30,6 @@ public class JAXB_XMLParser {
 	public JAXB_XMLParser() {
 
 		try {
-			jaxbContext = JAXBContext.newInstance("Examples");  // Package that contains ouer classes																													
 			jaxbContext = JAXBContext.newInstance("Examples");  // Package that contains our classes																													
 			unmarshaller = jaxbContext.createUnmarshaller();
 		}
