@@ -17,15 +17,15 @@ import java.io.*;
 import javax.xml.bind.*;
 
 //This is a candidate for a name change because you wont deal with a library any more in your conversion
-import Examples.Library;
+import Examples.PossiblePhones;
 
 public class JAXB_XMLParser {
 
 	private JAXBContext jaxbContext = null;     // generate a context to work in with JAXB											   
-	private Unmarshaller unmarshaller = null;   // unmarshall = genrate objects from an xml file												
+	private Unmarshaller unmarshaller = null;   // unmarshall = generate objects from an xml file												
 	
 	// This is a candidate for a name change because you wont deal with a library any more in your conversion
-	private Library mynewlib = null;            // the main object containing all data
+	private PossiblePhones mynewPP = null;            // the main object containing all data
 
 	public JAXB_XMLParser() {
 
@@ -38,19 +38,19 @@ public class JAXB_XMLParser {
 	}
 	
 	// Instance objects and return a list with this objects in it
-	public Library loadXML(InputStream fileinputstream) {
+	public PossiblePhones loadXML(InputStream fileinputstream) {
 
 		try {
 			Object xmltoobject = unmarshaller.unmarshal(fileinputstream);
 
-			if (mynewlib == null) {
+			if (mynewPP == null) {
 
 				// generate the mynewlib object that conatins all info from the xml document
-				mynewlib = (Library) (((JAXBElement) xmltoobject).getValue());
+				mynewPP = (PossiblePhones) (((JAXBElement) xmltoobject).getValue());
 				// The above (Library) is a candidate for a name change because you wont deal with 
 				// a library any more in your conversion
 				
-				return mynewlib; // return Library Objekt
+				return mynewPP; // return Library Object
 			}
 		} // try
 
