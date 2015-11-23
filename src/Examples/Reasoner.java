@@ -6,12 +6,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Vector;
 
-import Examples.Library;
-import Examples.Book;
-import Examples.Member;
-import Examples.Catalog;
-import Examples.Lending;
-
+import Examples.PossiblePhones;
+import Examples.Product;
+import Examples.Phone;
+import Examples.Tablet;
+import Examples.Customer;
+import Examples.Review;
 import Examples.SimpleGUI;
 
 public class Reasoner {
@@ -23,7 +23,7 @@ public class Reasoner {
 	// Path to YOUR-PROJECTROOT-IN-WORKSPACE\xjc.bat yourschemaname.xsd -d src
 	// -p yourclasspackagename
 
-	public Library thelibrary; //This is a candidate for a name change
+	public PossiblePhones thepossiblephone; //This is a candidate for a name change
 
 	public SimpleGUI Myface;
 

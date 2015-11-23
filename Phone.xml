@@ -1,8 +1,8 @@
 <!--  Our one element xml document, describing one instance of a Phone object -->
 
-<myPossiblePhones>      <!-- the one phoneobject containing all the info -->
+<myPossiblePhones>      <!-- the one phone object containing all the info -->
 
-	<name>Nowhere</name>            <!--  here follow all attributes of the phonesobject -->
+	<name>Nowhere</name>            <!--  here follow all attributes of the phone object -->
 	<city>That City</city>
 	<street>Dat Street</street>
 	<housenumber>Nam</housenumber>
