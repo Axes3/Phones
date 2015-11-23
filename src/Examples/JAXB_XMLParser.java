@@ -23,7 +23,7 @@ public class JAXB_XMLParser {
 
 	private JAXBContext jaxbContext = null;     // generate a context to work in with JAXB											   
 	private Unmarshaller unmarshaller = null;   // unmarshall = genrate objects from an xml file												
-	
+
 	// This is a candidate for a name change because you wont deal with a library any more in your conversion
 	private Library mynewlib = null;            // the main object containing all data
 
@@ -36,7 +36,7 @@ public class JAXB_XMLParser {
 		catch (JAXBException e) {
 		}
 	}
-	
+
 	// Instance objects and return a list with this objects in it
 	public Library loadXML(InputStream fileinputstream) {
 
@@ -49,7 +49,7 @@ public class JAXB_XMLParser {
 				mynewlib = (Library) (((JAXBElement) xmltoobject).getValue());
 				// The above (Library) is a candidate for a name change because you wont deal with 
 				// a library any more in your conversion
-				
+
 				return mynewlib; // return Library Objekt
 			}
 		} // try
