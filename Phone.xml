@@ -61,32 +61,9 @@
 		<reviewDescription>"Too confusing, " </reviewDescription>
 	</Review>
 	
-	<Review>
-		<reviewID>0002</reviewID>
-		<customerID>0002</customerID>
-		<reviewDescription>"Samsung :D!!!!!" </reviewDescription>
-	</Review>
-	
-	<Product>								<!-- An Instance of a Product -->
-		<pID>0001<pID>				<!-- And its attributes -->
-		<name>Hand Sling</name>
-		<description|>a rope connected to your hand and the phone, for not dropping it</description>
-		<cost> 2£</cost>
-		<brand>generic</brand>
-		<stock>100</stock>
-	</Product>
-
-	<Product>
-		<pID>0002<pID>
-		<name>Hello kitty case</name>
-		<description|>protective phone case with theme</description>
-		<cost>10£</cost>
-		<brand>Hello kitty</brand>
-		<stock>12</stock>
-	</Product>
 
 	<phone>									<!-- An Instance of a Phone -->
-		<pID>0003</pID>				<!-- And its attributes -->
+		<pID>0001</pID>				<!-- And its attributes -->
 		<OS>Android</OS>
 		<colour>Black</Colour>
 		<capacity>64 Gb</capacity>
@@ -95,7 +72,7 @@
 	</phone>
 	
 	<phone>
-		<pID>0004</pID>
+		<pID>0002</pID>
 		<OS>IoS</OS>
 		<colour>white</Colour>
 		<capacity>124Gb</capacity>
@@ -104,18 +81,18 @@
 	</phone>
 	
 	<tablet>								<!-- An Instance of a tablet-->
-		<pID>0005</pID>				<!-- And its attributes -->
-		<celluardata>Unlimited</celluardata>
-		<camerapiexels>8</camerapiexels>
+		<pID>0003</pID>				<!-- And its attributes -->
+		<celluardata>True</celluardata>
+		<camerapiexels>8.5</camerapiexels>
 		<battery>40 Hours</battery>
 		<OS>Android</OS>
-		<capacity>48 Gb</capacity>
+		<capacity>48Gb</capacity>
 		<colour>blue</colour>
 	</tablet>
 	
 	<tablet>
-		<pID>0006</pID>
-		<celluardata>Unlimited</celluardata>
+		<pID>0004</pID>
+		<celluardata>True</celluardata>
 		<camerapiexels>12</camerapiexels>
 		<battery>40hours</battery>
 		<OS>IoS</OS>
