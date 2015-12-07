@@ -32,6 +32,8 @@ public class Reasoner {
 	public List thePossiblePhoneList = new ArrayList(); //This is a candidate for a name change
 	public List thePhoneList = new ArrayList();    //This is a candidate for a name change
 	public List theTabletList = new ArrayList();  //This is a candidate for a name change
+	public List theReviewList = new ArrayList();
+	public List theCustomerList = new ArrayList();
 	public List theCatalogList = new ArrayList(); //This is a candidate for a name change
 	public List theRecentThing = new ArrayList(); 
 
