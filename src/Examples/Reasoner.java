@@ -29,11 +29,10 @@ public class Reasoner {
 
 	// The lists holding the class instances of all domain entities
 
-	public List theLibraryList = new ArrayList(); //This is a candidate for a name change
-	public List theBookList = new ArrayList();    //This is a candidate for a name change
-	public List theMemberList = new ArrayList();  //This is a candidate for a name change
+	public List thePossiblePhoneList = new ArrayList(); //This is a candidate for a name change
+	public List thePhoneList = new ArrayList();    //This is a candidate for a name change
+	public List theTabletList = new ArrayList();  //This is a candidate for a name change
 	public List theCatalogList = new ArrayList(); //This is a candidate for a name change
-	public List theLendingList = new ArrayList(); //This is a candidate for a name change
 	public List theRecentThing = new ArrayList(); 
 
 	// Gazetteers to store synonyms for the domain entities names
@@ -101,7 +100,6 @@ public class Reasoner {
 		catalogsyn.add("booklist");
 		catalogsyn.add("inventor");
 
-		lendingsyn.add(" lending");   //All of the following is a candidate for a name change
 
 		recentobjectsyn.add(" this");   //All of the following is a candidate for a name change
 		recentobjectsyn.add(" that");
