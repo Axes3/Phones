@@ -34,7 +34,7 @@ public class Reasoner {
 	public List theTabletList = new ArrayList();  //This is a candidate for a name change
 	public List theReviewList = new ArrayList();
 	public List theCustomerList = new ArrayList();
-	public List theCatalogList = new ArrayList(); //This is a candidate for a name change
+	public List theProductList = new ArrayList(); //This is a candidate for a name change
 	public List theRecentThing = new ArrayList(); 
 
 	// Gazetteers to store synonyms for the domain entities names
@@ -805,7 +805,7 @@ public class Reasoner {
 
 		} catch (Exception e) {
 			webtext = "Not yet";
-			System.out.println("Error connecting to wordnet");
+			System.out.println("Error connecting to internet");
 		}
 		return webtext;
 	}
