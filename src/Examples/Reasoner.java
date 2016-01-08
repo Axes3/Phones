@@ -112,15 +112,17 @@ public class Reasoner {
 		try {
 			FileInputStream readthatfile = new FileInputStream(xmlfiletoload); // initiate input stream
 
-			thelibrary = xmlhandler.loadXML(readthatfile);
+			thepossiblephone = xmlhandler.loadXML(readthatfile);
 
 			// Fill the Lists with the objects data just generated from the xml
 
-			theBookList = thelibrary.getBook();  		//This is a candidate for a name change
-			theMemberList = thelibrary.getMember(); 	//This is a candidate for a name change
-			theCatalogList = thelibrary.getCatalog(); 	//This is a candidate for a name change
-			theLendingList = thelibrary.getLending(); 	//This is a candidate for a name change
-			theLibraryList.add(thelibrary);             // force it to be a List, //This is a candidate for a name change
+			
+			theCustomerList = thepossiblephone.getCustomer(); 	
+			thePhoneList = thepossiblephone.getPhone(); 	
+			theTabletList = thepossiblephone.getTablet(); 
+			theReviewList = thepossiblephone.getReview(); 
+			
+			thePossiblePhoneList.add(thepossiblephone);             // force it to be a List, //This is a candidate for a name change
 
 			System.out.println("List reading");
 		}
@@ -207,7 +209,7 @@ public class Reasoner {
 
 		for (int x = 0; x < booksyn.size(); x++) {   //This is a candidate for a name change
 			if (input.contains(booksyn.get(x))) {    //This is a candidate for a name change
-				classtype = theBookList;             //This is a candidate for a name change
+				classtype = thePhoneList;             //This is a candidate for a name change
 				
 				input = input.replace(booksyn.get(x), "<b>"+booksyn.get(x)+"</b>");
 				
@@ -217,7 +219,7 @@ public class Reasoner {
 		}
 		for (int x = 0; x < membersyn.size(); x++) {  //This is a candidate for a name change
 			if (input.contains(membersyn.get(x))) {   //This is a candidate for a name change
-				classtype = theMemberList;            //This is a candidate for a name change
+				classtype = theCustomerList;            //This is a candidate for a name change
 				
 				input = input.replace(membersyn.get(x), "<b>"+membersyn.get(x)+"</b>");
 				
@@ -227,7 +229,7 @@ public class Reasoner {
 		}
 		for (int x = 0; x < catalogsyn.size(); x++) {  //This is a candidate for a name change
 			if (input.contains(catalogsyn.get(x))) {   //This is a candidate for a name change
-				classtype = theCatalogList;            //This is a candidate for a name change
+				classtype = theTabletList;            //This is a candidate for a name change
 				
 				input = input.replace(catalogsyn.get(x), "<b>"+catalogsyn.get(x)+"</b>");
 				
@@ -235,16 +237,7 @@ public class Reasoner {
 				System.out.println("Class type Catalog recognised.");
 			}
 		}
-		for (int x = 0; x < lendingsyn.size(); x++) {  //This is a candidate for a name change
-			if (input.contains(lendingsyn.get(x))) {   //This is a candidate for a name change
-				classtype = theLendingList;            //This is a candidate for a name change
-				
-				input = input.replace(lendingsyn.get(x), "<b>"+lendingsyn.get(x)+"</b>");
-				
-				subjectcounter = 1;	
-				System.out.println("Class type Lending recognised.");
-			}
-		}
+	
 		
 		if(subjectcounter == 0){
 			for (int x = 0; x < recentobjectsyn.size(); x++) {  
