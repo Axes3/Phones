@@ -11,36 +11,36 @@
 	<Customer>
 		<customerID>0001</customerID> 			<!-- An Instance of a Customer -->
 		<Firstname>Face</Firstname>             <!-- And its attributes -->
-		<surname>Buck</surname>
+		<lastname>Buck</lastname>
 		<Address>123 Yeehaw Ln</Address>
 	</Customer>
 	
 	<Customer>	
 	<customerID>0002</customerID> 
 		<Firstname>Face</Firstname>
-		<surname>Buck</surname>
+		<lastname>Buck</lastname>
 		<Address>123 Yeehaw Ln</Address>
 	</Customer>
 	
 	<Customer>
 		<customerID>0001</customerID>
 		<firstname>Joe</firstname>
-		<surname>Averaddress</surname>
-		<address>25 magical kingdom land</address>
+		<lastname>AverAddress</lastname>
+		<Address>25 magical kingdom land</Address>
 	</Customer>
 	
 	<Customer>
 		<customerID>0002</customerID>
 		<firstname>Susan</firstname>
-		<surname>Someone</surname>
-		<address>68 who knows where</address>
+		<lastname>Someone</lastname>
+		<Address>68 who knows where</Address>
 	</Customer>
 	
 	<Customer>
 		<customerID>0003</customerID>
 		<firstname>Tim</firstname>
-		<surname>Buktu</surname>
-		<address>18 somewhere place</address>
+		<lastname>Buktu</lastname>
+		<Address>18 somewhere place</Address>
 	</Customer>
 	
 	<Review>											 <!-- An Instance of a Review -->
@@ -82,6 +82,11 @@
 	
 	<tablet>								<!-- An Instance of a tablet-->
 		<pID>0003</pID>				<!-- And its attributes -->
+		<name>tablet1</name>
+		<description>A very cheap tablet</description>
+		<cost>50</cost>
+		<brand>Apple</brand>
+		<stock>10</stock>
 		<celluardata>True</celluardata>
 		<camerapiexels>8.5</camerapiexels>
 		<battery>40 Hours</battery>
@@ -89,9 +94,14 @@
 		<capacity>48Gb</capacity>
 		<colour>blue</colour>
 	</tablet>
-	
+
 	<tablet>
 		<pID>0004</pID>
+		<name>tablet2</name>
+		<description>A expensive tablet</description>
+		<cost>200</cost>
+		<brand>Amazon</brand>
+		<stock>20</stock>
 		<celluardata>True</celluardata>
 		<camerapiexels>12</camerapiexels>
 		<battery>40hours</battery>
