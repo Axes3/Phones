@@ -64,7 +64,13 @@
 
 	<phone>									<!-- An Instance of a Phone -->
 		<pID>0001</pID>				<!-- And its attributes -->
+		<name>Samsung galaxy S6</name>
+		<description>The Samsung Galaxy S6 is out of this world. With a slim metal and glass design, 
+					incredible screen and fantastic speed, it's the best Galaxy yet.</description>
+		<cost>379.99</cost>
+		<brand>Samsung</brand>
 		<OS>Android</OS>
+		<stock>20</stock>
 		<colour>Black</Colour>
 		<capacity>64 Gb</capacity>
 		<camerapixels>8</camerapixels>
@@ -73,12 +79,47 @@
 	
 	<phone>
 		<pID>0002</pID>
+		<name>iPhone 6</name>
+		<description>iPhone 6 isn't simply bigger - it's better in every way. Larger, yet dramatically thinner.
+					 More powerful, but remarkably power efficient. It's a new generation of iPhone.</description>
+		<brand>Apple</brand>
 		<OS>IoS</OS>
+		<cost>459</cost>
+		<stock>20</stock>
 		<colour>white</Colour>
 		<capacity>124Gb</capacity>
 		<camerapixels>12</camerapixels>
 		<battery>15 hours</battery>
 	</phone>
+	<phone>
+		<pID>0003</pID>
+		<name>iPhone 6s</name>
+		<description>iPhone 6 isn't simply bigger - it's better in every way. Larger, yet dramatically thinner.
+					 More powerful, but remarkably power efficient. It's a new generation of iPhone.</description>
+		<brand>Apple</brand>
+		<OS>IoS</OS>
+		<cost>539</cost>
+		<stock>20</stock>
+		<colour>white</Colour>
+		<capacity>124Gb</capacity>
+		<camerapixels>12</camerapixels>
+		<battery>15 hours</battery>
+	</phone>
+	<phone>									
+		<pID>0004</pID>				
+		<name>Samsung galaxy S6 edge</name>
+		<description>The Samsung Galaxy S6 is out of this world. With a slim metal and glass design, 
+					incredible screen and fantastic speed, it's the best Galaxy yet.</description>
+		<cost>479.99</cost>
+		<brand>Samsung</brand>
+		<OS>Android</OS>
+		<stock>20</stock>
+		<colour>Black</Colour>
+		<capacity>64 Gb</capacity>
+		<camerapixels>8</camerapixels>
+		<battery>60 hours</battery>
+	</phone>
+	
 	
 	<tablet>								<!-- An Instance of a tablet-->
 		<pID>0003</pID>				<!-- And its attributes -->
