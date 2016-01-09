@@ -1,0 +1,137 @@
+
+<!--  Our one element xml document, describing one instance of a PhoneLibrary object -->
+
+<myphonelibrary>      <!-- the one phonelibraryobject conatining alle the info -->
+
+	<name>UWL PhoneLibrary</name>            <!--  here follow all attributes of the myphonelibrary object -->
+	<city>Ealing</city>
+	<street>St Marys Road</street>
+	<housenumber>11</housenumber>
+	<postcode>W 13</postcode>	
+	
+	<Phone>                                       <!-- An Instance of a phone -->
+		<pid>Dostoyjewski</pid>              <!-- And its attributes -->
+		<name>War and Peace</name>
+		<brand>12345Sn</brand>
+		<description>shelf 3 row 4</description>
+		<stock>001</stock>
+		<battery>64</battery>
+		<os>android</os>
+		<capacity>48Gb</capacity>
+		<colour>blue</colour>
+	</Phone>
+	<Phone>
+		<pid>Herbert George Wells</pid>
+		<name>The war of the worlds</name>
+		<brand>12345Sn4567</brand>
+		<description>shelf 4 row 5</description>
+		<stock>null</stock>
+		<battery>64</battery>
+		<os>android</os>
+		<capacity>48Gb</capacity>
+		<colour>blue</colour>		
+	</Phone>
+	<Phone>
+		<pid>Herbert George Wells</pid>
+		<name>The time machine</name>
+		<brand>375954Fe4599</brand>
+		<description>shelf 7 row 11</description>
+		<stock>null</stock>
+		<battery>64</battery>
+		<os>android</os>
+		<capacity>48Gb</capacity>
+		<colour>blue</colour>
+	</Phone>
+	
+	
+	<Customer>
+		<surname>Joe</surname>
+		<lastname>Average</lastname>
+		<age>25</age>
+		<customerid>J_AV_25</customerid>
+		
+		<city>London</city>
+		<street>Bond Street</street>
+		<housenumber>14</housenumber>
+		<postcode>L 7</postcode>	
+	  
+	    <hasstock>null</hasstock>
+	</Customer>
+	<Customer>
+		<surname>Susan</surname>
+		<lastname>Someone</lastname>
+		<age>68</age>
+		<customerid>S_SO_68</customerid>
+		
+		<city>Ealing</city>
+		<street>Cairn Road</street>
+		<housenumber>17</housenumber>
+		<postcode>W 14</postcode>	
+	    
+	    <hasstock>001</hasstock>
+	</Customer>
+	<Customer>
+		<surname>Tim</surname>
+		<lastname>Buktu</lastname>
+		<age>18</age>
+		<customerid>T_BU_99</customerid>
+		
+		<city>Ealing</city>
+		<street>Uxbridge Road</street>
+		<housenumber>111</housenumber>
+		<postcode>W 22</postcode>	
+	    
+	    <hasstock>55</hasstock>
+	</Customer>
+	
+	<Catalog>
+		<name>scifiphones</name>
+		<url>www.somwhere.uk/scifi</url>
+		<description>upper storie left</description>
+		<Phones>12345Sn4567#375954Fe4567#</Phones>
+	</Catalog>
+	<Catalog>
+		<name>boringphones</name>
+		<url>www.somwhere.uk/boring</url>
+		<description>lower storie right</description>
+		<Phones>12345Sn#</Phones>
+	</Catalog>
+	
+	<Stock>
+		<stockid>001</stockid>
+		<customerid>S_SO_68</customerid>
+		<brand>12345Sn</brand>
+		<startdate>01102011</startdate>
+		<enddate>22102011</enddate>	
+	</Stock>
+	<Stock>
+		<stockid>002</stockid>
+		<customerid>S_SO_68</customerid>
+		<brand>12345XZ</brand>
+		<startdate>01102011</startdate>
+		<enddate>22102011</enddate>	
+	</Stock>
+	<Stock>
+		<stockid>003</stockid>
+		<customerid>S_SO_68</customerid>
+		<brand>0372</brand>
+		<startdate>01102011</startdate>
+		<enddate>22102011</enddate>	
+	</Stock>
+	
+	<Tablet>
+		<pid>tablet1</pid>
+		<name>firestick rip</name>
+		<brand>312312131312123123</brand>
+		<description>samsung firestick ripoff</description>
+		<stock>null</stock>
+	</Tablet>
+	<Tablet>
+		<pid>tablet1</pid>
+		<name>firestick</name>
+		<brand>312312131312</brand>
+		<description>amazon firestick</description>
+		<stock>null</stock>
+	</Tablet>
+
+</myphonelibrary>     <!-- closing the one phonelibraryobject conatining alle the info -->
