@@ -13,23 +13,21 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
-// I changed  FEW BITS 
 
 /**
- * <p>Java class for Tablet complex type.
+ * <p>Java class for Catalog complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="Tablet">
+ * &lt;complexType name="Catalog">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="pid" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="name" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *         &lt;element name="brand" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="url" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="description" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *         &lt;element name="stock" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="phones" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -39,50 +37,24 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Tablet", propOrder = {
-    "pid",
+@XmlType(name = "Catalog", propOrder = {
     "name",
-    "brand",
+    "url",
     "description",
-    "stock"
+    "phones"
 })
-public class Tablet {
+public class Catalog {
 
-    @XmlElement(required = true)
-    protected String pid;
     @XmlElement(required = true)
     protected String name;
     @XmlElement(required = true)
-    protected String brand;
+    protected String url;
     @XmlElement(required = true)
-    protected String description;
+    protected String description;   
     @XmlElement(required = true)
-    protected String stock;
-
-    /**
-     * Gets the value of the pid property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getPid() {
-        return pid;
-    }
-
-    /**
-     * Sets the value of the pid property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setPid(String value) {
-        this.pid = value;
-    }
-
+    protected String phones;
+    
+    
     /**
      * Gets the value of the name property.
      * 
@@ -108,27 +80,27 @@ public class Tablet {
     }
 
     /**
-     * Gets the value of the brand property.
+     * Gets the value of the url property.
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getBrand() {
-        return brand;
+    public String getUrl() {
+        return url;
     }
 
     /**
-     * Sets the value of the brand property.
+     * Sets the value of the url property.
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setBrand(String value) {
-        this.brand = value;
+    public void setUrl(String value) {
+        this.url = value;
     }
 
     /**
@@ -156,28 +128,29 @@ public class Tablet {
     }
 
     /**
-     * Gets the value of the stock property.
+     * Gets the value of the phones property.
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getStock() {
-        return stock;
+      
+    
+    public String getPhones() {
+        return phones;
     }
 
     /**
-     * Sets the value of the stock property.
+     * Sets the value of the phones property.
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setStock(String value) {
-        this.stock = value;
+    public void setPhones(String value) {
+        this.phones = value;
     }
-	
 
 }

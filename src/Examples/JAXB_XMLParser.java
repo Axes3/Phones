@@ -3,7 +3,7 @@ package Examples;
 // Note: The xsd schema viewer (in Eclipse) might report errors if you try to view your schemas with an 
 // active internet connection, if so: view (and edit) your xml schemas offline please 
 
-// This class uses the JAXB library to automatically read a xml file and 
+// This class uses the JAXB phonelibrary to automatically read a xml file and 
 // generate objects containing this data from pre-compiled classes
 
 // Remember to generate the classes first from your xml schema and import them into your project which  
@@ -16,41 +16,41 @@ package Examples;
 import java.io.*;
 import javax.xml.bind.*;
 
-//This is a candidate for a name change because you wont deal with a library any more in your conversion
-import Examples.PossiblePhones;
+//This is a candidate for a name change because you wont deal with a phonelibrary any more in your conversion
+import Examples.PhoneLibrary;
 
 public class JAXB_XMLParser {
 
 	private JAXBContext jaxbContext = null;     // generate a context to work in with JAXB											   
-	private Unmarshaller unmarshaller = null;   // unmarshall = generate objects from an xml file												
+	private Unmarshaller unmarshaller = null;   // unmarshall = genrate objects from an xml file												
 	
-	// This is a candidate for a name change because you wont deal with a library any more in your conversion
-	private PossiblePhones mynewPP = null;            // the main object containing all data
+	// This is a candidate for a name change because you wont deal with a phonelibrary any more in your conversion
+	private PhoneLibrary mynewlib = null;            // the main object containing all data
 
 	public JAXB_XMLParser() {
 
 		try {
-			jaxbContext = JAXBContext.newInstance("Examples");  // Package that contains our classes																													
+			jaxbContext = JAXBContext.newInstance("Examples");  // Package that contains ouer classes																													
 			unmarshaller = jaxbContext.createUnmarshaller();
 		}
 		catch (JAXBException e) {
 		}
 	}
-
+	
 	// Instance objects and return a list with this objects in it
-	public PossiblePhones loadXML(InputStream fileinputstream) {
+	public PhoneLibrary loadXML(InputStream fileinputstream) {
 
 		try {
 			Object xmltoobject = unmarshaller.unmarshal(fileinputstream);
 
-			if (mynewPP == null) {
+			if (mynewlib == null) {
 
 				// generate the mynewlib object that conatins all info from the xml document
-				mynewPP = (PossiblePhones) (((JAXBElement) xmltoobject).getValue());
-				// The above (Library) is a candidate for a name change because you wont deal with 
-				// a library any more in your conversion
-
-				return mynewPP; // return Library Object
+				mynewlib = (PhoneLibrary) (((JAXBElement) xmltoobject).getValue());
+				// The above (PhoneLibrary) is a candidate for a name change because you wont deal with 
+				// a phonelibrary any more in your conversion
+				
+				return mynewlib; // return PhoneLibrary Objekt
 			}
 		} // try
 

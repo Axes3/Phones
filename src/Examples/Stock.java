@@ -13,23 +13,22 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
-// I changed  FEW BITS 
 
 /**
- * <p>Java class for Tablet complex type.
+ * <p>Java class for Stock complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="Tablet">
+ * &lt;complexType name="Stock">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="pid" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *         &lt;element name="name" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="stockid" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="customerid" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="brand" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *         &lt;element name="description" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *         &lt;element name="stock" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="startdate" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="enddate" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -39,72 +38,72 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Tablet", propOrder = {
-    "pid",
-    "name",
+@XmlType(name = "Stock", propOrder = {
+    "stockid",
+    "customerid",
     "brand",
-    "description",
-    "stock"
+    "startdate",
+    "enddate"
 })
-public class Tablet {
+public class Stock {
 
     @XmlElement(required = true)
-    protected String pid;
+    protected String stockid;
     @XmlElement(required = true)
-    protected String name;
+    protected String customerid;
     @XmlElement(required = true)
     protected String brand;
     @XmlElement(required = true)
-    protected String description;
+    protected String startdate;
     @XmlElement(required = true)
-    protected String stock;
+    protected String enddate;
 
     /**
-     * Gets the value of the pid property.
+     * Gets the value of the stockid property.
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getPid() {
-        return pid;
+    public String getStockid() {
+        return stockid;
     }
 
     /**
-     * Sets the value of the pid property.
+     * Sets the value of the stockid property.
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setPid(String value) {
-        this.pid = value;
+    public void setStockid(String value) {
+        this.stockid = value;
     }
 
     /**
-     * Gets the value of the name property.
+     * Gets the value of the customerid property.
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getName() {
-        return name;
+    public String getCustomerid() {
+        return customerid;
     }
 
     /**
-     * Sets the value of the name property.
+     * Sets the value of the customerid property.
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setName(String value) {
-        this.name = value;
+    public void setCustomerid(String value) {
+        this.customerid = value;
     }
 
     /**
@@ -132,52 +131,51 @@ public class Tablet {
     }
 
     /**
-     * Gets the value of the description property.
+     * Gets the value of the startdate property.
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getDescription() {
-        return description;
+    public String getStartdate() {
+        return startdate;
     }
 
     /**
-     * Sets the value of the description property.
+     * Sets the value of the startdate property.
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setDescription(String value) {
-        this.description = value;
+    public void setStartdate(String value) {
+        this.startdate = value;
     }
 
     /**
-     * Gets the value of the stock property.
+     * Gets the value of the enddate property.
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getStock() {
-        return stock;
+    public String getEnddate() {
+        return enddate;
     }
 
     /**
-     * Sets the value of the stock property.
+     * Sets the value of the enddate property.
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setStock(String value) {
-        this.stock = value;
+    public void setEnddate(String value) {
+        this.enddate = value;
     }
-	
 
 }
