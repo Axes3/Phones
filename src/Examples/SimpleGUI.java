@@ -33,15 +33,15 @@ public class SimpleGUI {
 		myReasoner.initknowledge();              // fill "the brain" with knowledge
 
 		Input = new JTextField(80);	
-		Inputlabel = new JLabel("Question");
+		Inputlabel = new JLabel("Please enter queries here:");
 		
 		
-		Output = new JEditorPane("text/html","<b>Initial text</b>");
+		Output = new JEditorPane("text/html","<b>Possible Phones</b>");
 		Output.setEditable(false);                 // no one should be able to write in the display	
 		Output.setToolTipText("<html>Your dialog with the machine.</html>");
-		
+		//THE CONVERSION BOX
 		Scroll = new JScrollPane(Output);          									                
-		Scroll.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
+		Scroll.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
 		Scroll.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
 		Scroll.setBorder(BorderFactory.createTitledBorder("Conversation:"));
 		Scroll.getViewport().setPreferredSize(new Dimension(500,600));
@@ -49,7 +49,7 @@ public class SimpleGUI {
 		Info = new JEditorPane("text/html","");	    
 		Info.setEditable(false);  			
 		Info.setText("Background information about the conversations topic will be displayed in this window.");
-				      
+				      //BACKGROUND INFO THE WEBSITEs
 	    ScrollInfo = new JScrollPane(Info);   									                
 		ScrollInfo.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
 		ScrollInfo.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
@@ -64,10 +64,11 @@ public class SimpleGUI {
 		Outframe.add(Scroll);
 		Outframe.add(ScrollInfo);		
 
-		JFrame Main = new JFrame("KBS Conversation Bot");   // our main frame
+		JFrame Main = new JFrame("PossiblePhones (PP)");   // our main frame
 		
 		try {
     		Main.setContentPane(new JLabel(new ImageIcon(ImageIO.read(new File("test.jpg")))));
+        	
     	} catch (IOException e) {
     		e.printStackTrace();
     	}
@@ -93,9 +94,9 @@ public class SimpleGUI {
 		Main.setSize(1200, 800);
 		Main.setVisible(true);                               // Don't forget
 		
-		dialoghistory.add("<H2>Welcome to the PhoneLibrary Helpdesk, please type your question.</H2> " +
-				          "<H3>I can inform you about: The phonelibrary, its phones, its customers and " +
-				          "the current lendings. Just ask me.</H3><br>");
+		dialoghistory.add("<H2>Welcome to the Possible Phone Helpdesk, please type your question.</H2>" +
+				          "<H3>I can inform you about: The Phones, its specs, their reviews and " +
+				          "the current stock avaliable. Praise The Sun!</H3><br>");
 		
 		Output.setText(dialoghistory.firstElement());
 		Input.requestFocusInWindow();
@@ -119,8 +120,8 @@ public class SimpleGUI {
 				
 		answers = myReasoner.generateAnswer(question);
 	
-		displaytext = "<font color=\"red\" face=\"Georgia, Arial\">You: " + answers.get(0)+
-				       "</font>"+"<br><font COLOR=\"green\" face=\"Georgia, Arial\">" + 
+		displaytext = "<font color=\"black\" face=\"BellMT ,BellMT\"> <strong>*INSERT NAME HERE*: </strong>" + answers.get(0)+
+				       "</font>"+"<br><font COLOR=\"green\" face=\"BellMT, BellMT\">" + 
 				       answers.get(1) + "</font><br>";	
 		
 		dialoghistory.add(displaytext);                      // write the string to show in the
