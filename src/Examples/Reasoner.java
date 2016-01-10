@@ -292,7 +292,7 @@ public class Reasoner {
 				
 				subjectcounter = 1;
 				System.out.println("Class type Phone recognised.");
-				break;
+			
 			}
 		}}
 		
@@ -305,7 +305,7 @@ public class Reasoner {
 					
 					subjectcounter = 1;
 					System.out.println("Class type Customer recognised.");
-					break;
+					
 				}
 		}}
 		
@@ -318,7 +318,7 @@ public class Reasoner {
 				
 				subjectcounter = 1;	
 				System.out.println("Class type Stock recognised.");
-				break;
+				
 			}
 		}}
 		
@@ -331,7 +331,7 @@ public class Reasoner {
 				
 				subjectcounter = 1;
 				System.out.println("Class type Tablet recognised.");
-				break;
+				
 			}
 		}}
 		
