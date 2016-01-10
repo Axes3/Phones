@@ -80,6 +80,7 @@ public class Reasoner {
 		phonelibrarysyn.add("store");		//This is a candidate for a name change
 		phonelibrarysyn.add("house");		//This is a candidate for a name change
 		phonelibrarysyn.add("offer");		//This is a candidate for a name change
+		phonelibrarysyn.add("store");		//This is a candidate for a name change
 
 		phonesyn.add(" phone");    //All of the following is a candidate for a name change
 		phonesyn.add(" pone");
@@ -266,6 +267,7 @@ public class Reasoner {
 				|| input.contains("bye")
 				|| input.contains("thanks")
 				|| input.contains("cool thank")
+				|| input.contains("k thx bye")
 				|| input.contains("Domo Arigato")
 				|| input.contains("Danke schon")) 			
 

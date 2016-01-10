@@ -41,8 +41,8 @@ public class SimpleGUI {
 		Output.setToolTipText("<html>Your dialog with the machine.</html>");
 		//THE CONVERSION BOX
 		Scroll = new JScrollPane(Output);          									                
-		Scroll.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
-		Scroll.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+		Scroll.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED);
+		Scroll.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_AS_NEEDED);
 		Scroll.setBorder(BorderFactory.createTitledBorder("Conversation:"));
 		Scroll.getViewport().setPreferredSize(new Dimension(500,600));
 		
@@ -51,9 +51,9 @@ public class SimpleGUI {
 		Info.setText("Background information about the conversations topic will be displayed in this window.");
 				      //BACKGROUND INFO THE WEBSITEs
 	    ScrollInfo = new JScrollPane(Info);   									                
-		ScrollInfo.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
-		ScrollInfo.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
-		ScrollInfo.setBorder(BorderFactory.createTitledBorder("Background Info:"));
+		ScrollInfo.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED);
+		ScrollInfo.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+		ScrollInfo.setBorder(BorderFactory.createTitledBorder("Website Info:"));
 	    ScrollInfo.getViewport().setPreferredSize(new Dimension(500,600));
 				
 		Inframe = new JPanel();                             // Frame for the Inputelements
@@ -92,6 +92,7 @@ public class SimpleGUI {
 
 		Main.pack();
 		Main.setSize(1200, 800);
+		Main.setResizable(false);
 		Main.setVisible(true);                               // Don't forget
 		
 		dialoghistory.add("<H2>Welcome to the Possible Phone Helpdesk, please type your question.</H2>" +

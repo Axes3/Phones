@@ -4,10 +4,10 @@
 <myphonelibrary>      <!-- the one phonelibraryobject conatining alle the info -->
 
 	<name>UWL PhoneLibrary</name>            <!--  here follow all attributes of the myphonelibrary object -->
-	<city>Ealing</city>
-	<street>St Marys Road</street>
-	<housenumber>11</housenumber>
-	<postcode>W 13</postcode>	
+	<city>Kent</city>
+	<street>East Bungalow Dungeness Road</street>
+	<housenumber>1</housenumber>
+	<postcode>TN29 9NB</postcode>	
 	
 	<Phone>                                       <!-- An Instance of a phone -->
 		<pid>Dostoyjewski</pid>              <!-- And its attributes -->
@@ -16,7 +16,7 @@
 		<description>shelf 3 row 4</description>
 		<stock>001</stock>
 		<battery>64</battery>
-		<os>android</os>
+		<os>Android</os>
 		<capacity>48Gb</capacity>
 		<colour>blue</colour>
 		<camerapixels>13</camerapixels>
@@ -27,7 +27,7 @@
 		<name>The war of the worlds</name>
 		<brand>12345Sn4567</brand>
 		<description>shelf 4 row 5</description>
-		<stock>null</stock>j
+		<stock>null</stock>
 		<battery>64</battery>
 		<os>android</os>
 		<capacity>48Gb</capacity>
@@ -127,9 +127,9 @@
 	
 	<Tablet>
 		<pid>tablet1</pid>
-		<name>firestick rip</name>
+		<name>Samsung </name>
 		<brand>312312131312123123</brand>
-		<description>samsung firestick ripoff</description>
+		<description>Samsung</description>
 		<stock>null</stock>
 		<battery>100</battery>
 		<os>IOS</os>
@@ -140,10 +140,10 @@
 	</Tablet>
 	<Tablet>
 		<pid>tablet1</pid>
-		<name>firestick</name>
-		<brand>312312131312</brand>
-		<description>amazon firestick</description>
-		<stock>null</stock>
+		<name>Amazon Fire 7</name>
+		<brand>Amazon</brand>
+		<description>Incredibly thin and light, the Fire 7 comes equipped with a 7-inch IPS display (1024x600), which offers a great viewing experience.</description>
+		<stock>1</stock>
 		<battery>100</battery>
 		<os>IOS</os>
 		<capacity>200Gb</capacity>
