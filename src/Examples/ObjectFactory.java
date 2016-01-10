@@ -57,10 +57,12 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link Catalog }
+     * Create an instance of {@link Review }
      * 
      */
-
+    public Review createReview() {
+        return new Review();
+    }
 
     /**
      * Create an instance of {@link Stock }
@@ -77,7 +79,9 @@ public class ObjectFactory {
     public Phone createPhone() {
         return new Phone();
     }
-
+    public Tablet createTablet() {
+        return new Tablet();
+    }
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link PhoneLibrary }{@code >}}
      * 
