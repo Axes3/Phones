@@ -16,7 +16,7 @@
 		<description>shelf 3 row 4</description>
 		<stock>001</stock>
 		<battery>64</battery>
-		<os>android</os>
+		<os>Android</os>
 		<capacity>48Gb</capacity>
 		<colour>blue</colour>
 	</Phone>
@@ -121,17 +121,17 @@
 	
 	<Tablet>
 		<pid>tablet1</pid>
-		<name>firestick rip</name>
+		<name>Samsung </name>
 		<brand>312312131312123123</brand>
-		<description>samsung firestick ripoff</description>
+		<description>Samsung</description>
 		<stock>null</stock>
 	</Tablet>
 	<Tablet>
 		<pid>tablet1</pid>
-		<name>firestick</name>
-		<brand>312312131312</brand>
-		<description>amazon firestick</description>
-		<stock>null</stock>
+		<name>Amazon Fire 7</name>
+		<brand>Amazon</brand>
+		<description>Incredibly thin and light, the Fire 7 comes equipped with a 7-inch IPS display (1024x600), which offers a great viewing experience.</description>
+		<stock>1</stock>
 	</Tablet>
 
 </myphonelibrary>     <!-- closing the one phonelibraryobject conatining alle the info -->
