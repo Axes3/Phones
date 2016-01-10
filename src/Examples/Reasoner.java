@@ -170,7 +170,8 @@ public class Reasoner {
 		if (input.contains("list all")){questiontype = "list"; input = input.replace("list all", "<b>list all</b>");}
 		if (input.contains("diplay all")){questiontype = "list"; input = input.replace("diplay all", "<b>diplay all</b>");}
 		if (input.contains("show all")){questiontype = "list"; input = input.replace("show all", "<b>show all</b>");}
-
+		if (input.contains("find all")){questiontype = "list"; input = input.replace("find all", "<b>find all</b>");}
+		
 		if (input.contains("is there a")){questiontype = "checkfor"; input = input.replace("is there a", "<b>is there a</b>");}
 		if (input.contains("i am searching")){questiontype = "checkfor"; input = input.replace("i am searching", "<b>i am searching</b>");}
 		if (input.contains("i am looking for")){questiontype = "checkfor"; input = input.replace("i am looking for", "<b>i am looking for</b>");}
