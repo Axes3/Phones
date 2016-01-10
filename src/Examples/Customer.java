@@ -25,7 +25,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="surname" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="firstname" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="lastname" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="age" type="{http://www.w3.org/2001/XMLSchema}integer"/>
  *         &lt;element name="customerid" type="{http://www.w3.org/2001/XMLSchema}string"/>
@@ -44,7 +44,7 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "Customer", propOrder = {
-    "surname",
+    "firstname",
     "lastname",
     "age",
     "customerid",
@@ -57,7 +57,7 @@ import javax.xml.bind.annotation.XmlType;
 public class Customer {
 
     @XmlElement(required = true)
-    protected String surname;
+    protected String firstname;
     @XmlElement(required = true)
     protected String lastname;
     @XmlElement(required = true)
@@ -76,27 +76,27 @@ public class Customer {
     protected String hasstock;
 
     /**
-     * Gets the value of the surname property.
+     * Gets the value of the firstname property.
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getSurname() {
-        return surname;
+    public String getFirstname() {
+        return firstname;
     }
 
     /**
-     * Sets the value of the surname property.
+     * Sets the value of the firstname property.
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setSurname(String value) {
-        this.surname = value;
+    public void setFirstname(String value) {
+        this.firstname = value;
     }
 
     /**
