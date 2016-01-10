@@ -34,7 +34,6 @@ import javax.xml.bind.annotation.XmlType;
  *         &lt;element name="postcode" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="Phone" type="{}Phone" maxOccurs="unbounded"/>
  *         &lt;element name="Customer" type="{}Customer" maxOccurs="unbounded"/>
- *         &lt;element name="Catalog" type="{}Catalog" maxOccurs="unbounded"/>
  *         &lt;element name="Stock" type="{}Stock" maxOccurs="unbounded"/>
  *         &lt;element name="Tablet" type="{}Tablet" maxOccurs="unbounded"/>
  *       &lt;/sequence>
@@ -54,7 +53,6 @@ import javax.xml.bind.annotation.XmlType;
     "postcode",
     "phone",
     "customer",
-    "catalog",
     "stock",
 	"tablet"
 })
@@ -74,8 +72,7 @@ public class PhoneLibrary {
     protected List<Phone> phone;
     @XmlElement(name = "Customer", required = true)
     protected List<Customer> customer;
-    @XmlElement(name = "Catalog", required = true)
-    protected List<Catalog> catalog;
+    
     @XmlElement(name = "Stock", required = true)
     protected List<Stock> stock;
     @XmlElement(name = "Tablet", required = true)
@@ -281,12 +278,6 @@ public class PhoneLibrary {
      * 
      * 
      */
-    public List<Catalog> getCatalog() {
-        if (catalog == null) {
-            catalog = new ArrayList<Catalog>();
-        }
-        return this.catalog;
-    }
 
     /**
      * Gets the value of the stock property.

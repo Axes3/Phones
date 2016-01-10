@@ -9,7 +9,6 @@ import java.util.Vector;
 import Examples.PhoneLibrary;
 import Examples.Phone;
 import Examples.Customer;
-import Examples.Catalog;
 import Examples.Stock;
 
 import Examples.SimpleGUI;
@@ -32,7 +31,6 @@ public class Reasoner {
 	public List thePhoneLibraryList = new ArrayList(); //This is a candidate for a name change
 	public List thePhoneList = new ArrayList();    //This is a candidate for a name change
 	public List theCustomerList = new ArrayList();  //This is a candidate for a name change
-	public List theCatalogList = new ArrayList(); //This is a candidate for a name change
 	public List theStockList = new ArrayList(); //This is a candidate for a name change
 	public List theRecentThing = new ArrayList();
 	public List theTabletList = new ArrayList();    //This is a candidate for a name change
@@ -42,7 +40,6 @@ public class Reasoner {
 	public Vector<String> phonelibrarysyn = new Vector<String>();  //This is a candidate for a name change
 	public Vector<String> phonesyn = new Vector<String>();     //This is a candidate for a name change
 	public Vector<String> customersyn = new Vector<String>();   //This is a candidate for a name change
-	public Vector<String> catalogsyn = new Vector<String>();  //This is a candidate for a name change
 	public Vector<String> stocksyn = new Vector<String>();  //This is a candidate for a name change
 	public Vector<String> recentobjectsyn = new Vector<String>();
 	public Vector<String> tabletsyn = new Vector<String>();     //This is a candidate for a name change
@@ -103,9 +100,7 @@ public class Reasoner {
 		customersyn.add("man");
 		customersyn.add("guy");
 
-		catalogsyn.add("catalog");  //All of the following is a candidate for a name change
-		catalogsyn.add("phonelist");
-		catalogsyn.add("inventory");
+
 
 		stocksyn.add(" stock");   //All of the following is a candidate for a name change
 
@@ -124,7 +119,6 @@ public class Reasoner {
 
 			thePhoneList = thephonelibrary.getPhone();  		//This is a candidate for a name change
 			theCustomerList = thephonelibrary.getCustomer(); 	//This is a candidate for a name change
-			theCatalogList = thephonelibrary.getCatalog(); 	//This is a candidate for a name change
 			theStockList = thephonelibrary.getStock(); 	//This is a candidate for a name change
 			theTabletList = thephonelibrary.getTablet();  		//This is a candidate for a name change
 			thePhoneLibraryList.add(thephonelibrary);             // force it to be a List, //This is a candidate for a name change
@@ -297,16 +291,7 @@ public class Reasoner {
 				System.out.println("Class type Customer recognised.");
 			}
 		}
-		for (int x = 0; x < catalogsyn.size(); x++) {  //This is a candidate for a name change
-			if (input.contains(catalogsyn.get(x))) {   //This is a candidate for a name change
-				classtype = theCatalogList;            //This is a candidate for a name change
-				
-				input = input.replace(catalogsyn.get(x), "<b>"+catalogsyn.get(x)+"</b>");
-				
-				subjectcounter = 1;	
-				System.out.println("Class type Catalog recognised.");
-			}
-		}
+
 		for (int x = 0; x < stocksyn.size(); x++) {  //This is a candidate for a name change
 			if (input.contains(stocksyn.get(x))) {   //This is a candidate for a name change
 				classtype = theStockList;            //This is a candidate for a name change
@@ -400,7 +385,7 @@ public class Reasoner {
 						.get(1)));
 				System.out.println("Classtype List = "
 						+ classtype.getClass().getSimpleName());
-				System.out.println("Index in Liste = "
+				System.out.println("Index in List = "
 						+ Integer.valueOf(check.get(1)));
 				Currentindex = Integer.valueOf(check.get(1));
 				theRecentThing.clear(); // Clear it before adding (changing) the
@@ -414,8 +399,8 @@ public class Reasoner {
 		if (questiontype == "description") {   // We always expect a pronomial question to refer to the last
 											// object questioned for
 
-			answer=("You can find the "
-					+ classtype.get(0).getClass().getSimpleName() + " " + "at "
+			answer=("The description of  "
+					+ classtype.get(0).getClass().getSimpleName() + " " + "is "
 					+ Description(classtype, input));
 			Answered = 1; // An answer was given
 		}	
@@ -752,13 +737,7 @@ public class Reasoner {
 			}
 		}
 
-		if (thelist == theCatalogList) {                               //This is a candidate for a name change
-			for (int i = 0; i < thelist.size(); i++) {
-				Catalog curcat = (Catalog) thelist.get(i);             //This is a candidate for a name change
-				listemall = listemall 
-						+ "<li>" + (curcat.getName() + "</li>");      //This is a candidate for a name change
-			}
-		}
+
 		
 		if (thelist == theStockList) {                               //This is a candidate for a name change
 			for (int i = 0; i < thelist.size(); i++) {
@@ -796,7 +775,7 @@ public class Reasoner {
 
 		Vector<String> yesorno = new Vector<String>();
 		if (classtype.isEmpty()){
-			yesorno.add("Class not recognised. Please specify if you are searching for a phone, catalog, customer, review, or stock?");
+			yesorno.add("Class not recognised. Please specify if you are searching for a phone,  customer, review, or stock?");
 		} else {
 			yesorno.add("No we don't have such a "
 				+ classtype.get(0).getClass().getSimpleName());
@@ -837,19 +816,7 @@ public class Reasoner {
 			}
 		}
 
-		if (thelist == theCatalogList) {                                    //This is a candidate for a name change
-			for (int i = 0; i < thelist.size(); i++) {
-				Catalog curcat = (Catalog) thelist.get(i);                  //This is a candidate for a name change
-				if (input.contains(curcat.getName().toLowerCase())          //This is a candidate for a name change
-						|| input.contains(curcat.getUrl().toLowerCase())) { //This is a candidate for a name change
 
-					counter = i;
-					yesorno.set(0, "Yes we have such a Catalog");           //This is a candidate for a name change
-					yesorno.add(counter.toString());
-					i = thelist.size() + 1;
-				}
-			}
-		}
 		
 		if (thelist == theStockList) {                                     //This is a candidate for a name change
 			for (int i = 0; i < thelist.size(); i++) {
@@ -900,7 +867,7 @@ public class Reasoner {
 		return yesorno;
 	}
 
-	//  Method to retrieve the battery information from the object (Where is...) kind
+	//  Method to retrieve the battery information from the object (life) kind
 
 	public String Battery(List classtypelist, String input) {
 
@@ -1770,13 +1737,7 @@ public class Reasoner {
 
 			}
 
-			if (theRecentThing.get(0).getClass().getSimpleName()  
-					.toLowerCase().equals("catalog")) {                 //This is a candidate for a name change
 
-				Catalog curcat = (Catalog) theRecentThing.get(0);       //This is a candidate for a name change
-				description = (curcat.getDescription() + " ");                //This is a candidate for a name change
-
-			}
 
 			if (theRecentThing.get(0).getClass().getSimpleName()    
 					.toLowerCase().equals("phonelibrary")) {                  //This is a candidate for a name change
@@ -1860,27 +1821,7 @@ public class Reasoner {
 				}
 			}
 
-			if (thelist == theCatalogList) {                                       	 //This is a candidate for a name change
-
-				int counter = 0;
-
-				for (int i = 0; i < thelist.size(); i++) {
-
-					Catalog curcatalog = (Catalog) thelist.get(i);                    //This is a candidate for a name change
-
-					if (input.contains(curcatalog.getName().toLowerCase())            //This is a candidate for a name change						     
-							|| input.contains(curcatalog.getUrl().toLowerCase())) {   //This is a candidate for a name change
-
-						counter = i;
-						description = (curcatalog.getDescription() + " ");
-						Currentindex = counter;
-						theRecentThing.clear();                                      // Clear it before adding (changing) the	
-						classtype = theCatalogList;                                  //This is a candidate for a name change
-						theRecentThing.add(classtype.get(Currentindex));
-						i = thelist.size() + 1;                                      // force break
-					}
-				}
-			}
+		
 
 			if (thelist == thePhoneLibraryList) {                                                  //This is a candidate for a name change
 

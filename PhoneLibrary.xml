@@ -83,18 +83,7 @@
 	    <hasstock>55</hasstock>
 	</Customer>
 	
-	<Catalog>
-		<name>scifiphones</name>
-		<url>www.somwhere.uk/scifi</url>
-		<description>upper storie left</description>
-		<Phones>12345Sn4567#375954Fe4567#</Phones>
-	</Catalog>
-	<Catalog>
-		<name>boringphones</name>
-		<url>www.somwhere.uk/boring</url>
-		<description>lower storie right</description>
-		<Phones>12345Sn#</Phones>
-	</Catalog>
+	
 	
 	<Stock>
 		<stockid>001</stockid>
