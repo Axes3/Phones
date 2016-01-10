@@ -177,10 +177,9 @@ public class Reasoner {
 		if (input.contains("i look for")){questiontype = "checkfor"; input = input.replace("i look for", "<b>i look for</b>");}
 		if (input.contains("is there")){questiontype = "checkfor"; input = input.replace("is there", "<b>is there</b>");}
 
-		if (input.contains("where") 
-				|| input.contains("can't find")
-				|| input.contains("can i find") 
-				|| input.contains("way to"))
+		if (input.contains("describe") 
+				|| input.contains("description")
+				|| input.contains("what is"))
 
 		{
 			questiontype = "description";
@@ -805,7 +804,7 @@ public class Reasoner {
 		return yesorno;
 	}
 
-	//  Method to retrieve the description information from the object (Where is...) kind
+	//  Method to retrieve the battery information from the object (Where is...) kind
 
 	public String Battery(List classtypelist, String input) {
 
