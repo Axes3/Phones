@@ -140,23 +140,16 @@
 	</Tablet>
 	<Tablet>
 		<pid>tablet1</pid>
-<<<<<<< HEAD
 		<name>Amazon Fire 7</name>
 		<brand>Amazon</brand>
 		<description>Incredibly thin and light, the Fire 7 comes equipped with a 7-inch IPS display (1024x600), which offers a great viewing experience.</description>
 		<stock>1</stock>
-=======
-		<name>firestick</name>
-		<brand>312312131312</brand>
-		<description>amazon firestick</description>
-		<stock>null</stock>
 		<battery>100</battery>
 		<os>IOS</os>
 		<capacity>200Gb</capacity>
 		<colour>red</colour>
 		<camerapixels>13</camerapixels>
 		<cost>360</cost>
->>>>>>> origin/master
 	</Tablet>
 
 </myphonelibrary>     <!-- closing the one phonelibraryobject conatining alle the info -->
