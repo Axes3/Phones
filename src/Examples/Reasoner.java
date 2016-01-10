@@ -194,6 +194,52 @@ public class Reasoner {
 			System.out.println("Battery life");
 		}
 		
+		if (input.contains(" os") 
+				|| input.contains("operating")
+				|| input.contains("system")
+				|| input.contains("operatingsystem"))
+
+		{
+			questiontype = "os";
+			System.out.println("os");
+		}
+	
+		if (input.contains("capacity") 
+				|| input.contains("size")
+				|| input.contains("storage"))
+
+		{
+			questiontype = "capacity";
+			System.out.println("capacity");
+		}
+		
+		if (input.contains("colour") 
+				|| input.contains("colour")
+				|| input.contains("color"))
+
+		{
+			questiontype = "colour";
+			System.out.println("colour");
+		}
+		
+		if (input.contains("camerapixels") 
+				|| input.contains("camera")
+				|| input.contains("pixels")
+				|| input.contains("photo"))
+
+		{
+			questiontype = "camerapixels";
+			System.out.println("camerapixels");
+		}
+		
+		if (input.contains("cost") 
+				|| input.contains("price")
+				|| input.contains("how much"))
+
+		{
+			questiontype = "cost";
+			System.out.println("cost");
+		}
 		
 		if (input.contains("can i stock") 
 				|| input.contains("can i borrow")
@@ -387,6 +433,56 @@ public class Reasoner {
 			answer=("The battery life of  "
 					+ classtype.get(0).getClass().getSimpleName() + " " + "is "
 					+ Battery(classtype, input));
+
+			Answered = 1; // An answer was given
+		}	
+		
+		if (questiontype == "os") {   // We always expect a pronomial question to refer to the last
+											// object questioned for
+
+			answer=("The os of  "
+					+ classtype.get(0).getClass().getSimpleName() + " " + "is "
+					+ Os(classtype, input));
+
+			Answered = 1; // An answer was given
+		}	
+		
+		if (questiontype == "capacity") {   // We always expect a pronomial question to refer to the last
+											// object questioned for
+
+			answer=("The capacity of  "
+					+ classtype.get(0).getClass().getSimpleName() + " " + "is "
+					+ Capacity(classtype, input));
+
+			Answered = 1; // An answer was given
+		}	
+		
+		if (questiontype == "colour") {   // We always expect a pronomial question to refer to the last
+											// object questioned for
+
+			answer=("The colour of  "
+					+ classtype.get(0).getClass().getSimpleName() + " " + "is "
+					+ Colour(classtype, input));
+
+			Answered = 1; // An answer was given
+		}	
+		
+		if (questiontype == "camerapixels") {   // We always expect a pronomial question to refer to the last
+											// object questioned for
+
+			answer=("The camerapixels of  "
+					+ classtype.get(0).getClass().getSimpleName() + " " + "is "
+					+ Camerapixels(classtype, input));
+
+			Answered = 1; // An answer was given
+		}	
+		
+		if (questiontype == "cost") {   // We always expect a pronomial question to refer to the last
+											// object questioned for
+
+			answer=("The cost of  "
+					+ classtype.get(0).getClass().getSimpleName() + " " + "is "
+					+ Cost(classtype, input));
 
 			Answered = 1; // An answer was given
 		}	
@@ -943,6 +1039,701 @@ public class Reasoner {
 		Myface.setmyinfobox(URL2);
 
 		return battery;
+	}	
+
+	public String Os(List classtypelist, String input) {
+
+		List thelist = classtypelist;
+		String os = "";
+
+		// if a pronomial was used "it", "them" etc: Reference to the recent thing
+
+		if (thelist == theRecentThing && theRecentThing.get(0) != null) {
+
+			if (theRecentThing.get(0).getClass().getSimpleName()
+					.toLowerCase().equals("phone")) {                  //This is a candidate for a name change
+
+				Phone curphone = (Phone) theRecentThing.get(0);          //This is a candidate for a name change
+				os = (curphone.getOs() + " ");             //This is a candidate for a name change
+
+			}
+			
+			if (theRecentThing.get(0).getClass().getSimpleName()
+					.toLowerCase().equals("tablet")) {                  //This is a candidate for a name change
+
+				Tablet curtablet = (Tablet) theRecentThing.get(0);          //This is a candidate for a name change
+				os = (curtablet.getOs() + " ");             //This is a candidate for a name change
+
+			}
+
+			if (theRecentThing.get(0).getClass().getSimpleName()
+					.toLowerCase().equals("customer")) {               //This is a candidate for a name change
+
+				Customer curmem = (Customer) theRecentThing.get(0);      //This is a candidate for a name change
+				os = (curmem.getCity() + " " + curmem.getStreet() + " " + curmem  //This is a candidate for a name change
+						.getHousenumber());                                    //This is a candidate for a name change
+
+			}
+
+
+			if (theRecentThing.get(0).getClass().getSimpleName()    
+					.toLowerCase().equals("phonelibrary")) {                  //This is a candidate for a name change
+
+				os = (thephonelibrary.getCity() + " " + thephonelibrary.getStreet() + thephonelibrary   //This is a candidate for a name change
+						.getHousenumber());                                           //This is a candidate for a name change
+			}
+
+		}
+
+		// if a direct noun was used (phone, customer, etc)
+
+		else {
+
+			if (thelist == thePhoneList) {                         //This is a candidate for a name change
+
+				int counter = 0;
+
+				for (int i = 0; i < thelist.size(); i++) {
+
+					Phone curphone = (Phone) thelist.get(i);         //This is a candidate for a name change
+
+					if (input.contains(curphone.getName().toLowerCase())            //This is a candidate for a name change
+							|| input.contains(curphone.getBrand().toLowerCase())      //This is a candidate for a name change
+							|| input.contains(curphone.getPid().toLowerCase())) {  //This is a candidate for a name change
+
+						counter = i;
+						os = (curphone.getOs() + " ");
+						Currentindex = counter;
+						theRecentThing.clear(); 									// Clear it before adding (changing) theRecentThing
+						classtype = thePhoneList;                                    //This is a candidate for a name change
+						theRecentThing.add(classtype.get(Currentindex));
+						i = thelist.size() + 1; 									// force break
+					}
+				}
+			}
+			
+			if (thelist == theTabletList) {                         //This is a candidate for a name change
+
+				int counter = 0;
+
+				for (int i = 0; i < thelist.size(); i++) {
+
+					Tablet curtablet = (Tablet) thelist.get(i);         //This is a candidate for a name change
+
+					if (input.contains(curtablet.getName().toLowerCase())            //This is a candidate for a name change
+							|| input.contains(curtablet.getBrand().toLowerCase())      //This is a candidate for a name change
+							|| input.contains(curtablet.getPid().toLowerCase())) {  //This is a candidate for a name change
+
+						counter = i;
+						os = (curtablet.getOs() + " ");
+						Currentindex = counter;
+						theRecentThing.clear(); 									// Clear it before adding (changing) theRecentThing
+						classtype = theTabletList;                                    //This is a candidate for a name change
+						theRecentThing.add(classtype.get(Currentindex));
+						i = thelist.size() + 1; 									// force break
+					}
+				}
+			}
+			
+
+			if (thelist == theCustomerList) {                                         //This is a candidate for a name change
+
+				int counter = 0;
+
+				for (int i = 0; i < thelist.size(); i++) {
+
+					Customer curcustomer = (Customer) thelist.get(i);         				  //This is a candidate for a name change
+
+					if (input.contains(curcustomer.getSurname().toLowerCase())              //This is a candidate for a name change
+							|| input.contains(curcustomer.getLastname().toLowerCase())      //This is a candidate for a name change
+							|| input.contains(curcustomer.getCustomerid().toLowerCase())) {   //This is a candidate for a name change
+
+						counter = i;
+						os = (curcustomer.getCity() + " ");
+						Currentindex = counter;
+						theRecentThing.clear(); 										// Clear it before adding (changing) the
+						classtype = theCustomerList;            	 						//This is a candidate for a name change
+						theRecentThing.add(classtype.get(Currentindex));
+						i = thelist.size() + 1; 				             	        // force break
+					}
+				}
+			}
+
+
+			if (thelist == thePhoneLibraryList) {                                                  //This is a candidate for a name change
+
+				os = (thephonelibrary.getCity() + " " + thephonelibrary.getStreet() + thephonelibrary  //This is a candidate for a name change
+						.getHousenumber());                                                   //This is a candidate for a name change
+			}
+		}
+
+		URL = "http://wordnetweb.princeton.edu/perl/webwn?o2=&o0=1&o8=1&o1=1&o7=&o5=&o9=&o6=&o3=&o4=&s="
+				+ classtype.get(0).getClass().getSimpleName().toLowerCase();
+		URL2 = "http://en.wikipedia.org/wiki/"
+				+ classtype.get(0).getClass().getSimpleName().toLowerCase();
+		System.out.println("URL = "+URL);
+		tooltipstring = readwebsite(URL);
+		String html = "<html>" + tooltipstring + "</html>";
+		Myface.setmytooltip(html);
+		Myface.setmyinfobox(URL2);
+
+		return os;
+	}
+	
+	public String Capacity(List classtypelist, String input) {
+
+		List thelist = classtypelist;
+		String capacity = "";
+
+		// if a pronomial was used "it", "them" etc: Reference to the recent thing
+
+		if (thelist == theRecentThing && theRecentThing.get(0) != null) {
+
+			if (theRecentThing.get(0).getClass().getSimpleName()
+					.toLowerCase().equals("phone")) {                  //This is a candidate for a name change
+
+				Phone curphone = (Phone) theRecentThing.get(0);          //This is a candidate for a name change
+				capacity = (curphone.getCapacity() + " ");             //This is a candidate for a name change
+
+			}
+			
+			if (theRecentThing.get(0).getClass().getSimpleName()
+					.toLowerCase().equals("tablet")) {                  //This is a candidate for a name change
+
+				Tablet curtablet = (Tablet) theRecentThing.get(0);          //This is a candidate for a name change
+				capacity = (curtablet.getCapacity() + " ");             //This is a candidate for a name change
+
+			}
+
+			if (theRecentThing.get(0).getClass().getSimpleName()
+					.toLowerCase().equals("customer")) {               //This is a candidate for a name change
+
+				Customer curmem = (Customer) theRecentThing.get(0);      //This is a candidate for a name change
+				capacity = (curmem.getCity() + " " + curmem.getStreet() + " " + curmem  //This is a candidate for a name change
+						.getHousenumber());                                    //This is a candidate for a name change
+
+			}
+
+
+			if (theRecentThing.get(0).getClass().getSimpleName()    
+					.toLowerCase().equals("phonelibrary")) {                  //This is a candidate for a name change
+
+				capacity = (thephonelibrary.getCity() + " " + thephonelibrary.getStreet() + thephonelibrary   //This is a candidate for a name change
+						.getHousenumber());                                           //This is a candidate for a name change
+			}
+
+		}
+
+		// if a direct noun was used (phone, customer, etc)
+
+		else {
+
+			if (thelist == thePhoneList) {                         //This is a candidate for a name change
+
+				int counter = 0;
+
+				for (int i = 0; i < thelist.size(); i++) {
+
+					Phone curphone = (Phone) thelist.get(i);         //This is a candidate for a name change
+
+					if (input.contains(curphone.getName().toLowerCase())            //This is a candidate for a name change
+							|| input.contains(curphone.getBrand().toLowerCase())      //This is a candidate for a name change
+							|| input.contains(curphone.getPid().toLowerCase())) {  //This is a candidate for a name change
+
+						counter = i;
+						capacity = (curphone.getCapacity() + " ");
+						Currentindex = counter;
+						theRecentThing.clear(); 									// Clear it before adding (changing) theRecentThing
+						classtype = thePhoneList;                                    //This is a candidate for a name change
+						theRecentThing.add(classtype.get(Currentindex));
+						i = thelist.size() + 1; 									// force break
+					}
+				}
+			}
+			
+			if (thelist == theTabletList) {                         //This is a candidate for a name change
+
+				int counter = 0;
+
+				for (int i = 0; i < thelist.size(); i++) {
+
+					Tablet curtablet = (Tablet) thelist.get(i);         //This is a candidate for a name change
+
+					if (input.contains(curtablet.getName().toLowerCase())            //This is a candidate for a name change
+							|| input.contains(curtablet.getBrand().toLowerCase())      //This is a candidate for a name change
+							|| input.contains(curtablet.getPid().toLowerCase())) {  //This is a candidate for a name change
+
+						counter = i;
+						capacity = (curtablet.getCapacity() + " ");
+						Currentindex = counter;
+						theRecentThing.clear(); 									// Clear it before adding (changing) theRecentThing
+						classtype = theTabletList;                                    //This is a candidate for a name change
+						theRecentThing.add(classtype.get(Currentindex));
+						i = thelist.size() + 1; 									// force break
+					}
+				}
+			}
+			
+
+			if (thelist == theCustomerList) {                                         //This is a candidate for a name change
+
+				int counter = 0;
+
+				for (int i = 0; i < thelist.size(); i++) {
+
+					Customer curcustomer = (Customer) thelist.get(i);         				  //This is a candidate for a name change
+
+					if (input.contains(curcustomer.getSurname().toLowerCase())              //This is a candidate for a name change
+							|| input.contains(curcustomer.getLastname().toLowerCase())      //This is a candidate for a name change
+							|| input.contains(curcustomer.getCustomerid().toLowerCase())) {   //This is a candidate for a name change
+
+						counter = i;
+						capacity = (curcustomer.getCity() + " ");
+						Currentindex = counter;
+						theRecentThing.clear(); 										// Clear it before adding (changing) the
+						classtype = theCustomerList;            	 						//This is a candidate for a name change
+						theRecentThing.add(classtype.get(Currentindex));
+						i = thelist.size() + 1; 				             	        // force break
+					}
+				}
+			}
+
+
+			if (thelist == thePhoneLibraryList) {                                                  //This is a candidate for a name change
+
+				capacity = (thephonelibrary.getCity() + " " + thephonelibrary.getStreet() + thephonelibrary  //This is a candidate for a name change
+						.getHousenumber());                                                   //This is a candidate for a name change
+			}
+		}
+
+		URL = "http://wordnetweb.princeton.edu/perl/webwn?o2=&o0=1&o8=1&o1=1&o7=&o5=&o9=&o6=&o3=&o4=&s="
+				+ classtype.get(0).getClass().getSimpleName().toLowerCase();
+		URL2 = "http://en.wikipedia.org/wiki/"
+				+ classtype.get(0).getClass().getSimpleName().toLowerCase();
+		System.out.println("URL = "+URL);
+		tooltipstring = readwebsite(URL);
+		String html = "<html>" + tooltipstring + "</html>";
+		Myface.setmytooltip(html);
+		Myface.setmyinfobox(URL2);
+
+		return capacity;
+	}	
+	
+	public String Colour(List classtypelist, String input) {
+
+		List thelist = classtypelist;
+		String colour = "";
+
+		// if a pronomial was used "it", "them" etc: Reference to the recent thing
+
+		if (thelist == theRecentThing && theRecentThing.get(0) != null) {
+
+			if (theRecentThing.get(0).getClass().getSimpleName()
+					.toLowerCase().equals("phone")) {                  //This is a candidate for a name change
+
+				Phone curphone = (Phone) theRecentThing.get(0);          //This is a candidate for a name change
+				colour = (curphone.getColour() + " ");             //This is a candidate for a name change
+
+			}
+			
+			if (theRecentThing.get(0).getClass().getSimpleName()
+					.toLowerCase().equals("tablet")) {                  //This is a candidate for a name change
+
+				Tablet curtablet = (Tablet) theRecentThing.get(0);          //This is a candidate for a name change
+				colour = (curtablet.getColour() + " ");             //This is a candidate for a name change
+
+			}
+
+			if (theRecentThing.get(0).getClass().getSimpleName()
+					.toLowerCase().equals("customer")) {               //This is a candidate for a name change
+
+				Customer curmem = (Customer) theRecentThing.get(0);      //This is a candidate for a name change
+				colour = (curmem.getCity() + " " + curmem.getStreet() + " " + curmem  //This is a candidate for a name change
+						.getHousenumber());                                    //This is a candidate for a name change
+
+			}
+
+
+			if (theRecentThing.get(0).getClass().getSimpleName()    
+					.toLowerCase().equals("phonelibrary")) {                  //This is a candidate for a name change
+
+				colour = (thephonelibrary.getCity() + " " + thephonelibrary.getStreet() + thephonelibrary   //This is a candidate for a name change
+						.getHousenumber());                                           //This is a candidate for a name change
+			}
+
+		}
+
+		// if a direct noun was used (phone, customer, etc)
+
+		else {
+
+			if (thelist == thePhoneList) {                         //This is a candidate for a name change
+
+				int counter = 0;
+
+				for (int i = 0; i < thelist.size(); i++) {
+
+					Phone curphone = (Phone) thelist.get(i);         //This is a candidate for a name change
+
+					if (input.contains(curphone.getName().toLowerCase())            //This is a candidate for a name change
+							|| input.contains(curphone.getBrand().toLowerCase())      //This is a candidate for a name change
+							|| input.contains(curphone.getPid().toLowerCase())) {  //This is a candidate for a name change
+
+						counter = i;
+						colour = (curphone.getColour() + " ");
+						Currentindex = counter;
+						theRecentThing.clear(); 									// Clear it before adding (changing) theRecentThing
+						classtype = thePhoneList;                                    //This is a candidate for a name change
+						theRecentThing.add(classtype.get(Currentindex));
+						i = thelist.size() + 1; 									// force break
+					}
+				}
+			}
+			
+			if (thelist == theTabletList) {                         //This is a candidate for a name change
+
+				int counter = 0;
+
+				for (int i = 0; i < thelist.size(); i++) {
+
+					Tablet curtablet = (Tablet) thelist.get(i);         //This is a candidate for a name change
+
+					if (input.contains(curtablet.getName().toLowerCase())            //This is a candidate for a name change
+							|| input.contains(curtablet.getBrand().toLowerCase())      //This is a candidate for a name change
+							|| input.contains(curtablet.getPid().toLowerCase())) {  //This is a candidate for a name change
+
+						counter = i;
+						colour = (curtablet.getColour() + " ");
+						Currentindex = counter;
+						theRecentThing.clear(); 									// Clear it before adding (changing) theRecentThing
+						classtype = theTabletList;                                    //This is a candidate for a name change
+						theRecentThing.add(classtype.get(Currentindex));
+						i = thelist.size() + 1; 									// force break
+					}
+				}
+			}
+			
+
+			if (thelist == theCustomerList) {                                         //This is a candidate for a name change
+
+				int counter = 0;
+
+				for (int i = 0; i < thelist.size(); i++) {
+
+					Customer curcustomer = (Customer) thelist.get(i);         				  //This is a candidate for a name change
+
+					if (input.contains(curcustomer.getSurname().toLowerCase())              //This is a candidate for a name change
+							|| input.contains(curcustomer.getLastname().toLowerCase())      //This is a candidate for a name change
+							|| input.contains(curcustomer.getCustomerid().toLowerCase())) {   //This is a candidate for a name change
+
+						counter = i;
+						colour = (curcustomer.getCity() + " ");
+						Currentindex = counter;
+						theRecentThing.clear(); 										// Clear it before adding (changing) the
+						classtype = theCustomerList;            	 						//This is a candidate for a name change
+						theRecentThing.add(classtype.get(Currentindex));
+						i = thelist.size() + 1; 				             	        // force break
+					}
+				}
+			}
+
+
+			if (thelist == thePhoneLibraryList) {                                                  //This is a candidate for a name change
+
+				colour = (thephonelibrary.getCity() + " " + thephonelibrary.getStreet() + thephonelibrary  //This is a candidate for a name change
+						.getHousenumber());                                                   //This is a candidate for a name change
+			}
+		}
+
+		URL = "http://wordnetweb.princeton.edu/perl/webwn?o2=&o0=1&o8=1&o1=1&o7=&o5=&o9=&o6=&o3=&o4=&s="
+				+ classtype.get(0).getClass().getSimpleName().toLowerCase();
+		URL2 = "http://en.wikipedia.org/wiki/"
+				+ classtype.get(0).getClass().getSimpleName().toLowerCase();
+		System.out.println("URL = "+URL);
+		tooltipstring = readwebsite(URL);
+		String html = "<html>" + tooltipstring + "</html>";
+		Myface.setmytooltip(html);
+		Myface.setmyinfobox(URL2);
+
+		return colour;
+	}	
+	
+	public String Camerapixels(List classtypelist, String input) {
+
+		List thelist = classtypelist;
+		String camerapixels = "";
+
+		// if a pronomial was used "it", "them" etc: Reference to the recent thing
+
+		if (thelist == theRecentThing && theRecentThing.get(0) != null) {
+
+			if (theRecentThing.get(0).getClass().getSimpleName()
+					.toLowerCase().equals("phone")) {                  //This is a candidate for a name change
+
+				Phone curphone = (Phone) theRecentThing.get(0);          //This is a candidate for a name change
+				camerapixels = (curphone.getCamerapixels() + " ");             //This is a candidate for a name change
+
+			}
+			
+			if (theRecentThing.get(0).getClass().getSimpleName()
+					.toLowerCase().equals("tablet")) {                  //This is a candidate for a name change
+
+				Tablet curtablet = (Tablet) theRecentThing.get(0);          //This is a candidate for a name change
+				camerapixels = (curtablet.getCamerapixels() + " ");             //This is a candidate for a name change
+
+			}
+
+			if (theRecentThing.get(0).getClass().getSimpleName()
+					.toLowerCase().equals("customer")) {               //This is a candidate for a name change
+
+				Customer curmem = (Customer) theRecentThing.get(0);      //This is a candidate for a name change
+				camerapixels = (curmem.getCity() + " " + curmem.getStreet() + " " + curmem  //This is a candidate for a name change
+						.getHousenumber());                                    //This is a candidate for a name change
+
+			}
+
+
+			if (theRecentThing.get(0).getClass().getSimpleName()    
+					.toLowerCase().equals("phonelibrary")) {                  //This is a candidate for a name change
+
+				camerapixels = (thephonelibrary.getCity() + " " + thephonelibrary.getStreet() + thephonelibrary   //This is a candidate for a name change
+						.getHousenumber());                                           //This is a candidate for a name change
+			}
+
+		}
+
+		// if a direct noun was used (phone, customer, etc)
+
+		else {
+
+			if (thelist == thePhoneList) {                         //This is a candidate for a name change
+
+				int counter = 0;
+
+				for (int i = 0; i < thelist.size(); i++) {
+
+					Phone curphone = (Phone) thelist.get(i);         //This is a candidate for a name change
+
+					if (input.contains(curphone.getName().toLowerCase())            //This is a candidate for a name change
+							|| input.contains(curphone.getBrand().toLowerCase())      //This is a candidate for a name change
+							|| input.contains(curphone.getPid().toLowerCase())) {  //This is a candidate for a name change
+
+						counter = i;
+						camerapixels = (curphone.getCamerapixels() + " ");
+						Currentindex = counter;
+						theRecentThing.clear(); 									// Clear it before adding (changing) theRecentThing
+						classtype = thePhoneList;                                    //This is a candidate for a name change
+						theRecentThing.add(classtype.get(Currentindex));
+						i = thelist.size() + 1; 									// force break
+					}
+				}
+			}
+			
+			if (thelist == theTabletList) {                         //This is a candidate for a name change
+
+				int counter = 0;
+
+				for (int i = 0; i < thelist.size(); i++) {
+
+					Tablet curtablet = (Tablet) thelist.get(i);         //This is a candidate for a name change
+
+					if (input.contains(curtablet.getName().toLowerCase())            //This is a candidate for a name change
+							|| input.contains(curtablet.getBrand().toLowerCase())      //This is a candidate for a name change
+							|| input.contains(curtablet.getPid().toLowerCase())) {  //This is a candidate for a name change
+
+						counter = i;
+						camerapixels = (curtablet.getCamerapixels() + " ");
+						Currentindex = counter;
+						theRecentThing.clear(); 									// Clear it before adding (changing) theRecentThing
+						classtype = theTabletList;                                    //This is a candidate for a name change
+						theRecentThing.add(classtype.get(Currentindex));
+						i = thelist.size() + 1; 									// force break
+					}
+				}
+			}
+			
+
+			if (thelist == theCustomerList) {                                         //This is a candidate for a name change
+
+				int counter = 0;
+
+				for (int i = 0; i < thelist.size(); i++) {
+
+					Customer curcustomer = (Customer) thelist.get(i);         				  //This is a candidate for a name change
+
+					if (input.contains(curcustomer.getSurname().toLowerCase())              //This is a candidate for a name change
+							|| input.contains(curcustomer.getLastname().toLowerCase())      //This is a candidate for a name change
+							|| input.contains(curcustomer.getCustomerid().toLowerCase())) {   //This is a candidate for a name change
+
+						counter = i;
+						camerapixels = (curcustomer.getCity() + " ");
+						Currentindex = counter;
+						theRecentThing.clear(); 										// Clear it before adding (changing) the
+						classtype = theCustomerList;            	 						//This is a candidate for a name change
+						theRecentThing.add(classtype.get(Currentindex));
+						i = thelist.size() + 1; 				             	        // force break
+					}
+				}
+			}
+
+
+			if (thelist == thePhoneLibraryList) {                                                  //This is a candidate for a name change
+
+				camerapixels = (thephonelibrary.getCity() + " " + thephonelibrary.getStreet() + thephonelibrary  //This is a candidate for a name change
+						.getHousenumber());                                                   //This is a candidate for a name change
+			}
+		}
+
+		URL = "http://wordnetweb.princeton.edu/perl/webwn?o2=&o0=1&o8=1&o1=1&o7=&o5=&o9=&o6=&o3=&o4=&s="
+				+ classtype.get(0).getClass().getSimpleName().toLowerCase();
+		URL2 = "http://en.wikipedia.org/wiki/"
+				+ classtype.get(0).getClass().getSimpleName().toLowerCase();
+		System.out.println("URL = "+URL);
+		tooltipstring = readwebsite(URL);
+		String html = "<html>" + tooltipstring + "</html>";
+		Myface.setmytooltip(html);
+		Myface.setmyinfobox(URL2);
+
+		return camerapixels;
+	}	
+	
+	public String Cost(List classtypelist, String input) {
+
+		List thelist = classtypelist;
+		String cost = "";
+
+		// if a pronomial was used "it", "them" etc: Reference to the recent thing
+
+		if (thelist == theRecentThing && theRecentThing.get(0) != null) {
+
+			if (theRecentThing.get(0).getClass().getSimpleName()
+					.toLowerCase().equals("phone")) {                  //This is a candidate for a name change
+
+				Phone curphone = (Phone) theRecentThing.get(0);          //This is a candidate for a name change
+				cost = (curphone.getCost() + " ");             //This is a candidate for a name change
+
+			}
+			
+			if (theRecentThing.get(0).getClass().getSimpleName()
+					.toLowerCase().equals("tablet")) {                  //This is a candidate for a name change
+
+				Tablet curtablet = (Tablet) theRecentThing.get(0);          //This is a candidate for a name change
+				cost = (curtablet.getCost() + " ");             //This is a candidate for a name change
+
+			}
+
+			if (theRecentThing.get(0).getClass().getSimpleName()
+					.toLowerCase().equals("customer")) {               //This is a candidate for a name change
+
+				Customer curmem = (Customer) theRecentThing.get(0);      //This is a candidate for a name change
+				cost = (curmem.getCity() + " " + curmem.getStreet() + " " + curmem  //This is a candidate for a name change
+						.getHousenumber());                                    //This is a candidate for a name change
+
+			}
+
+
+			if (theRecentThing.get(0).getClass().getSimpleName()    
+					.toLowerCase().equals("phonelibrary")) {                  //This is a candidate for a name change
+
+				cost = (thephonelibrary.getCity() + " " + thephonelibrary.getStreet() + thephonelibrary   //This is a candidate for a name change
+						.getHousenumber());                                           //This is a candidate for a name change
+			}
+
+		}
+
+		// if a direct noun was used (phone, customer, etc)
+
+		else {
+
+			if (thelist == thePhoneList) {                         //This is a candidate for a name change
+
+				int counter = 0;
+
+				for (int i = 0; i < thelist.size(); i++) {
+
+					Phone curphone = (Phone) thelist.get(i);         //This is a candidate for a name change
+
+					if (input.contains(curphone.getName().toLowerCase())            //This is a candidate for a name change
+							|| input.contains(curphone.getBrand().toLowerCase())      //This is a candidate for a name change
+							|| input.contains(curphone.getPid().toLowerCase())) {  //This is a candidate for a name change
+
+						counter = i;
+						cost = (curphone.getCost() + " ");
+						Currentindex = counter;
+						theRecentThing.clear(); 									// Clear it before adding (changing) theRecentThing
+						classtype = thePhoneList;                                    //This is a candidate for a name change
+						theRecentThing.add(classtype.get(Currentindex));
+						i = thelist.size() + 1; 									// force break
+					}
+				}
+			}
+			
+			if (thelist == theTabletList) {                         //This is a candidate for a name change
+
+				int counter = 0;
+
+				for (int i = 0; i < thelist.size(); i++) {
+
+					Tablet curtablet = (Tablet) thelist.get(i);         //This is a candidate for a name change
+
+					if (input.contains(curtablet.getName().toLowerCase())            //This is a candidate for a name change
+							|| input.contains(curtablet.getBrand().toLowerCase())      //This is a candidate for a name change
+							|| input.contains(curtablet.getPid().toLowerCase())) {  //This is a candidate for a name change
+
+						counter = i;
+						cost = (curtablet.getCost() + " ");
+						Currentindex = counter;
+						theRecentThing.clear(); 									// Clear it before adding (changing) theRecentThing
+						classtype = theTabletList;                                    //This is a candidate for a name change
+						theRecentThing.add(classtype.get(Currentindex));
+						i = thelist.size() + 1; 									// force break
+					}
+				}
+			}
+			
+
+			if (thelist == theCustomerList) {                                         //This is a candidate for a name change
+
+				int counter = 0;
+
+				for (int i = 0; i < thelist.size(); i++) {
+
+					Customer curcustomer = (Customer) thelist.get(i);         				  //This is a candidate for a name change
+
+					if (input.contains(curcustomer.getSurname().toLowerCase())              //This is a candidate for a name change
+							|| input.contains(curcustomer.getLastname().toLowerCase())      //This is a candidate for a name change
+							|| input.contains(curcustomer.getCustomerid().toLowerCase())) {   //This is a candidate for a name change
+
+						counter = i;
+						cost = (curcustomer.getCity() + " ");
+						Currentindex = counter;
+						theRecentThing.clear(); 										// Clear it before adding (changing) the
+						classtype = theCustomerList;            	 						//This is a candidate for a name change
+						theRecentThing.add(classtype.get(Currentindex));
+						i = thelist.size() + 1; 				             	        // force break
+					}
+				}
+			}
+
+
+			if (thelist == thePhoneLibraryList) {                                                  //This is a candidate for a name change
+
+				cost = (thephonelibrary.getCity() + " " + thephonelibrary.getStreet() + thephonelibrary  //This is a candidate for a name change
+						.getHousenumber());                                                   //This is a candidate for a name change
+			}
+		}
+
+		URL = "http://wordnetweb.princeton.edu/perl/webwn?o2=&o0=1&o8=1&o1=1&o7=&o5=&o9=&o6=&o3=&o4=&s="
+				+ classtype.get(0).getClass().getSimpleName().toLowerCase();
+		URL2 = "http://en.wikipedia.org/wiki/"
+				+ classtype.get(0).getClass().getSimpleName().toLowerCase();
+		System.out.println("URL = "+URL);
+		tooltipstring = readwebsite(URL);
+		String html = "<html>" + tooltipstring + "</html>";
+		Myface.setmytooltip(html);
+		Myface.setmyinfobox(URL2);
+
+		return cost;
 	}	
 	
 	public String Description(List classtypelist, String input) {
