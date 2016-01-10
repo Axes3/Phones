@@ -2350,7 +2350,7 @@
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "Post",
+											"text": "Review",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5
 										},
@@ -2521,7 +2521,7 @@
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "+Review: Integer",
+											"text": "+Post: Integer",
 											"horizontalAlignment": 0,
 											"verticalAlignment": 5
 										},
@@ -4918,7 +4918,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "Post",
+					"name": "Review",
 					"ownedElements": [
 						{
 							"_type": "UMLAssociation",
@@ -5010,7 +5010,7 @@
 							"_parent": {
 								"$ref": "AAAAAAFQpClqP+UlbZM="
 							},
-							"name": "Review",
+							"name": "Post",
 							"visibility": "public",
 							"isStatic": false,
 							"isLeaf": false,
