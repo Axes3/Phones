@@ -4,10 +4,10 @@
 <myphonelibrary>      <!-- the one phonelibraryobject conatining alle the info -->
 
 	<name>UWL PhoneLibrary</name>            <!--  here follow all attributes of the myphonelibrary object -->
-	<city>Ealing</city>
-	<street>St Marys Road</street>
-	<housenumber>11</housenumber>
-	<postcode>W 13</postcode>	
+	<city>Kent</city>
+	<street>East Bungalow Dungeness Road</street>
+	<housenumber>1</housenumber>
+	<postcode>TN29 9NB</postcode>	
 	
 	<Phone>                                       <!-- An Instance of a phone -->
 		<pid>Dostoyjewski</pid>              <!-- And its attributes -->
