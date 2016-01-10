@@ -34,6 +34,8 @@ import javax.xml.bind.annotation.XmlType;
  *         &lt;element name="os" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="capacity" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="colour" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="camerapixels" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="cost" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -52,7 +54,9 @@ import javax.xml.bind.annotation.XmlType;
 	"battery",
 	"os",
 	"capacity",
-	"colour"
+	"colour",
+	"camerapixels",
+	"cost"
 })
 public class Phone {
 
@@ -74,6 +78,10 @@ public class Phone {
     protected String capacity;
     @XmlElement(required = true)
     protected String colour;
+    @XmlElement(required = true)
+    protected String camerapixels;
+    @XmlElement(required = true)
+    protected String cost;
 
     /**
      * Gets the value of the pid property.
@@ -295,4 +303,53 @@ public class Phone {
 		
     }
 
+    /**
+     * Gets the value of the camerapixels property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getCamerapixels() {
+        return camerapixels;
+    }
+
+    /**
+     * Sets the value of the camerapixels property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setCamerapixels(String value) {
+        this.camerapixels = value;
+		
+    }
+	
+    /**
+     * Gets the value of the cost property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getCost() {
+        return cost;
+    }
+
+    /**
+     * Sets the value of the cost property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setCost(String value) {
+        this.cost = value;
+		
+    }
 }

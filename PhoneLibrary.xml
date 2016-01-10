@@ -19,6 +19,8 @@
 		<os>android</os>
 		<capacity>48Gb</capacity>
 		<colour>blue</colour>
+		<camerapixels>13</camerapixels>
+		<cost>360</cost>
 	</Phone>
 	<Phone>
 		<pid>Herbert George Wells</pid>
@@ -29,7 +31,9 @@
 		<battery>64</battery>
 		<os>android</os>
 		<capacity>48Gb</capacity>
-		<colour>blue</colour>		
+		<colour>blue</colour>
+		<camerapixels>18</camerapixels>
+		<cost>420</cost>		
 	</Phone>
 	<Phone>
 		<pid>Herbert George Wells</pid>
@@ -41,6 +45,8 @@
 		<os>android</os>
 		<capacity>48Gb</capacity>
 		<colour>blue</colour>
+		<camerapixels>20</camerapixels>
+		<cost>500</cost>
 	</Phone>
 	
 	
@@ -129,6 +135,8 @@
 		<os>IOS</os>
 		<capacity>200Gb</capacity>
 		<colour>red</colour>
+		<camerapixels>25</camerapixels>
+		<cost>400</cost>
 	</Tablet>
 	<Tablet>
 		<pid>tablet1</pid>
@@ -140,6 +148,8 @@
 		<os>IOS</os>
 		<capacity>200Gb</capacity>
 		<colour>red</colour>
+		<camerapixels>13</camerapixels>
+		<cost>360</cost>
 	</Tablet>
 
 </myphonelibrary>     <!-- closing the one phonelibraryobject conatining alle the info -->
