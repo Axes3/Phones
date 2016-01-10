@@ -256,7 +256,16 @@ public class Reasoner {
 			questiontype = "cake";
 			
 		}
-		
+		if (input.contains("help")
+				|| input.contains("halp")
+				|| input.contains("confused")
+				|| input.contains("confuse")
+				|| input.contains("dunno")
+				|| input.contains("don't know"))
+		{
+			questiontype = "help";
+			
+		}
 		if (input.contains("thank you") 
 				|| input.contains("bye")
 				|| input.contains("thanks")
@@ -408,6 +417,12 @@ public class Reasoner {
 		if (questiontype == "cake") {  
 
 			answer=("The cake is a lie");
+
+			Answered = 1; // An answer was given
+		}
+		if (questiontype == "help") {  
+
+			answer=("Please type in question such as 'show all phones' OR 'show all tablets' OR reviews");
 
 			Answered = 1; // An answer was given
 		}	
