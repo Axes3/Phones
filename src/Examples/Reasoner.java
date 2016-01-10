@@ -823,6 +823,14 @@ public class Reasoner {
 				battery = (curphone.getBattery() + " ");             //This is a candidate for a name change
 
 			}
+			
+			if (theRecentThing.get(0).getClass().getSimpleName()
+					.toLowerCase().equals("tablet")) {                  //This is a candidate for a name change
+
+				Tablet curtablet = (Tablet) theRecentThing.get(0);          //This is a candidate for a name change
+				battery = (curtablet.getBattery() + " ");             //This is a candidate for a name change
+
+			}
 
 			if (theRecentThing.get(0).getClass().getSimpleName()
 					.toLowerCase().equals("customer")) {               //This is a candidate for a name change
@@ -864,6 +872,29 @@ public class Reasoner {
 						Currentindex = counter;
 						theRecentThing.clear(); 									// Clear it before adding (changing) theRecentThing
 						classtype = thePhoneList;                                    //This is a candidate for a name change
+						theRecentThing.add(classtype.get(Currentindex));
+						i = thelist.size() + 1; 									// force break
+					}
+				}
+			}
+			
+			if (thelist == theTabletList) {                         //This is a candidate for a name change
+
+				int counter = 0;
+
+				for (int i = 0; i < thelist.size(); i++) {
+
+					Tablet curtablet = (Tablet) thelist.get(i);         //This is a candidate for a name change
+
+					if (input.contains(curtablet.getName().toLowerCase())            //This is a candidate for a name change
+							|| input.contains(curtablet.getBrand().toLowerCase())      //This is a candidate for a name change
+							|| input.contains(curtablet.getPid().toLowerCase())) {  //This is a candidate for a name change
+
+						counter = i;
+						battery = (curtablet.getBattery() + " ");
+						Currentindex = counter;
+						theRecentThing.clear(); 									// Clear it before adding (changing) theRecentThing
+						classtype = theTabletList;                                    //This is a candidate for a name change
 						theRecentThing.add(classtype.get(Currentindex));
 						i = thelist.size() + 1; 									// force break
 					}
