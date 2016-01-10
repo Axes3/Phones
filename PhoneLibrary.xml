@@ -88,7 +88,7 @@
 	<Stock>
 		<stockid>001</stockid>
 		<customerid>S_SO_68</customerid>
-		<brand>Google</brand>
+		<brand>12345Sn</brand>
 		<startdate>01102011</startdate>
 		<enddate>22102011</enddate>	
 	</Stock>

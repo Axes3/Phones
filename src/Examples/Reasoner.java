@@ -10,7 +10,6 @@ import Examples.PhoneLibrary;
 import Examples.Phone;
 import Examples.Customer;
 import Examples.Stock;
-import Examples.Tablet;
 
 import Examples.SimpleGUI;
 
@@ -80,8 +79,9 @@ public class Reasoner {
 		phonelibrarysyn.add("offer");		//This is a candidate for a name change
 		phonelibrarysyn.add("store");		//This is a candidate for a name change
 
-		//All of the following is a candidate for a name change
+		phonesyn.add(" phone");    //All of the following is a candidate for a name change
 		phonesyn.add(" pone");
+		phonesyn.add(" phone");
 		phonesyn.add("celular");
 		phonesyn.add("talker");
 		phonesyn.add(" smartphone");
