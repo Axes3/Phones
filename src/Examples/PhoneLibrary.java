@@ -256,28 +256,6 @@ public class PhoneLibrary {
         return this.customer;
     }
 
-    /**
-     * Gets the value of the catalog property.
-     * 
-     * <p>
-     * This getter method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the catalog property.
-     * 
-     * <p>
-     * For example, to add a new item, do as follows:
-     * <pre>
-     *    getCatalog().add(newItem);
-     * </pre>
-     * 
-     * 
-     * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link Catalog }
-     * 
-     * 
-     */
 
     /**
      * Gets the value of the stock property.
