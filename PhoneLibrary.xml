@@ -8,7 +8,6 @@
 	<street>East Bungalow Dungeness Road</street>
 	<housenumber>1</housenumber>
 	<postcode>TN29 9NB</postcode>	
-	
 	<Phone>                                       <!-- An Instance of a phone -->
 		<pid>Dostoyjewski</pid>              <!-- And its attributes -->
 		<name>War and Peace</name>
@@ -55,12 +54,10 @@
 		<lastname>Average</lastname>
 		<age>25</age>
 		<customerid>J_AV_25</customerid>
-		
 		<city>London</city>
 		<street>Bond Street</street>
 		<housenumber>14</housenumber>
 		<postcode>L 7</postcode>	
-	  
 	    <hasstock>null</hasstock>
 	</Customer>
 	<Customer>
@@ -68,12 +65,10 @@
 		<lastname>Someone</lastname>
 		<age>68</age>
 		<customerid>S_SO_68</customerid>
-		
 		<city>Ealing</city>
 		<street>Cairn Road</street>
 		<housenumber>17</housenumber>
-		<postcode>W 14</postcode>	
-	    
+		<postcode>W 14</postcode>
 	    <hasstock>001</hasstock>
 	</Customer>
 	<Customer>
@@ -81,12 +76,10 @@
 		<lastname>Buktu</lastname>
 		<age>18</age>
 		<customerid>T_BU_99</customerid>
-		
 		<city>Ealing</city>
 		<street>Uxbridge Road</street>
 		<housenumber>111</housenumber>
-		<postcode>W 22</postcode>	
-	    
+		<postcode>W 22</postcode>
 	    <hasstock>55</hasstock>
 	</Customer>
 	
