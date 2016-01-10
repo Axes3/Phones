@@ -80,18 +80,18 @@ public class Reasoner {
 		phonelibrarysyn.add("offer");		//This is a candidate for a name change
 		phonelibrarysyn.add("store");		//This is a candidate for a name change
 
-		phonesyn.add(" phone");    //All of the following is a candidate for a name change
-		phonesyn.add(" pone");
-		phonesyn.add(" phone");
+		phonesyn.add("phone");    //All of the following is a candidate for a name change
+		phonesyn.add("pone");
+		phonesyn.add("phone");
 		phonesyn.add("celular");
 		phonesyn.add("talker");
-		phonesyn.add(" smartphone");
-		phonesyn.add(" brick");
-		phonesyn.add(" smarthpone");
+		phonesyn.add("smartphone");
+		phonesyn.add("brick");
+		phonesyn.add("smarthpone");
 		
-		tabletsyn.add(" tablet");    //All of the following is a candidate for a name change
-		tabletsyn.add(" tab");
-		tabletsyn.add(" tabblet");
+		tabletsyn.add("tablet");    //All of the following is a candidate for a name change
+		tabletsyn.add("tab");
+		tabletsyn.add("tabblet");
 
 
 		customersyn.add("customer"); //All of the following is a candidate for a name change
@@ -104,7 +104,7 @@ public class Reasoner {
 		customersyn.add("darling");
 
 
-		stocksyn.add(" stock");   //All of the following is a candidate for a name change
+		stocksyn.add("stock");   //All of the following is a candidate for a name change
 
 		recentobjectsyn.add(" this");   //All of the following is a candidate for a name change
 		recentobjectsyn.add(" that");
@@ -282,17 +282,21 @@ public class Reasoner {
 
 
 		// ------- Checking the Subject of the Question --------------------------------------
-
+		boolean foundSubject=false;
+		if(foundSubject==false){
 		for (int x = 0; x < phonesyn.size(); x++) {   //This is a candidate for a name change
 			if (input.contains(phonesyn.get(x))) {    //This is a candidate for a name change
 				classtype = thePhoneList;             //This is a candidate for a name change
-				
+				foundSubject=true;
 				input = input.replace(phonesyn.get(x), "<b>"+phonesyn.get(x)+"</b>");
 				
 				subjectcounter = 1;
 				System.out.println("Class type Phone recognised.");
+				break;
 			}
-		}
+		}}
+		
+		if(foundSubject==false){
 		for (int x = 0; x < customersyn.size(); x++) {  //This is a candidate for a name change
 			if (input.contains(customersyn.get(x))) {   //This is a candidate for a name change
 				classtype = theCustomerList;            //This is a candidate for a name change
@@ -302,8 +306,9 @@ public class Reasoner {
 				subjectcounter = 1;
 				System.out.println("Class type Customer recognised.");
 			}
-		}
-
+		}}
+		
+		if(foundSubject==false){
 		for (int x = 0; x < stocksyn.size(); x++) {  //This is a candidate for a name change
 			if (input.contains(stocksyn.get(x))) {   //This is a candidate for a name change
 				classtype = theStockList;            //This is a candidate for a name change
@@ -313,7 +318,9 @@ public class Reasoner {
 				subjectcounter = 1;	
 				System.out.println("Class type Stock recognised.");
 			}
-		}
+		}}
+		
+		if(foundSubject==false){
 		for (int x = 0; x < tabletsyn.size(); x++) {   //This is a candidate for a name change
 			if (input.contains(tabletsyn.get(x))) {    //This is a candidate for a name change
 				classtype = theTabletList;             //This is a candidate for a name change
@@ -323,7 +330,7 @@ public class Reasoner {
 				subjectcounter = 1;
 				System.out.println("Class type Tablet recognised.");
 			}
-		}
+		}}
 		
 		if(subjectcounter == 0){
 			for (int x = 0; x < recentobjectsyn.size(); x++) {  
