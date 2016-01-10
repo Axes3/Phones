@@ -36,7 +36,7 @@ public class Reasoner {
 	public List theStockList = new ArrayList(); //This is a candidate for a name change
 	public List theRecentThing = new ArrayList();
 	public List theTabletList = new ArrayList();    //This is a candidate for a name change
-
+	public static int error = 0;
 	// Gazetteers to store synonyms for the domain entities names
 
 	public Vector<String> phonelibrarysyn = new Vector<String>();  //This is a candidate for a name change
@@ -138,7 +138,7 @@ public class Reasoner {
 	}
 
 	public  Vector<String> generateAnswer(String input) { // Generate an answer (String Vector)
-		int error = 0;
+		
 		Vector<String> out = new Vector<String>();
 		out.clear();                 // just to make sure this is a new and clean vector
 		
@@ -406,13 +406,14 @@ public class Reasoner {
 		if (Answered == 0) { // No answer was given		
 			if (error >= 3)
 			{
+				error= 0;
 				answer=("NAUGHTY NAUGHTY YOU SHOULD REALLY TRY TO LEARN TO TYPE 'HELP'");
 			}
 			else
 			{
 			error+=1;
 			answer=("Sorry I didn't understand the term" +" '"+ input +"'.");
-			System.out.println(error);
+			
 			}
 		}
 
