@@ -405,7 +405,7 @@ public class Reasoner {
 		
 		if (Answered == 0) { // No answer was given
 
-			answer=("Sorry I didn't understand that.");
+			answer=("Sorry I didn't understand the term" +" '"+ input +"'.");
 		}
 
 		out.add(input);
@@ -678,7 +678,7 @@ public class Reasoner {
 
 		Vector<String> yesorno = new Vector<String>();
 		if (classtype.isEmpty()){
-			yesorno.add("Class not recognised. Please specify if you are searching for a phone, catalog, customer, or stock?");
+			yesorno.add("Class not recognised. Please specify if you are searching for a phone, catalog, customer, review, or stock?");
 		} else {
 			yesorno.add("No we don't have such a "
 				+ classtype.get(0).getClass().getSimpleName());
@@ -1068,12 +1068,12 @@ public class Reasoner {
 		for (int i = 0; i < thePhoneList.size(); i++) {   // check each phone in the List, //This is a candidate for a name change
 
 			Phone curphone = (Phone) thePhoneList.get(i);    // cast list element to Phone Class //This is a candidate for a name change												
-			System.out.println("Testing Phone" + curphone.getPid());
+			System.out.println("Testing Phone" + " " + curphone.getPid());
 
 			if (curphone.getPid().equalsIgnoreCase("dostoyjewski")) {     // check for the author //This is a candidate for a name change
 
-				answer = "A phone written by " + curphone.getPid() + "\n"  //This is a candidate for a name change
-						+ " is for example the classic " + curphone.getName()      //This is a candidate for a name change
+				answer = "Phone by : " + curphone.getPid() + "\n"  //This is a candidate for a name change
+						+ " Phone Model: " + curphone.getName()      //This is a candidate for a name change
 						+ ".";
 			}
 		}
