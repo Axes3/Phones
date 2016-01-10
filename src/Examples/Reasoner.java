@@ -251,7 +251,8 @@ public class Reasoner {
 			System.out.println("Find Phone Availability");
 		}
 		
-		if (input.contains("cake") )
+		if (input.contains("cake")
+				|| input.contains("HL3"))
 		{
 			questiontype = "cake";
 			
