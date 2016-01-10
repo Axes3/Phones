@@ -220,6 +220,7 @@ public class Reasoner {
 				|| input.contains("bye")
 				|| input.contains("thanks")
 				|| input.contains("cool thank")
+				|| input.contains("k thx bye")
 				|| input.contains("Domo Arigato")
 				|| input.contains("Danke schon")) 			
 
