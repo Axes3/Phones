@@ -572,13 +572,13 @@ public class Reasoner {
 			}
 		}
 
-		// check all stocks if they contain the phones ISBN
+		// check all stocks if they contain the phones
 
 		for (int i = 0; i < theStockList.size(); i++) {
 
 			Stock curstock = (Stock) theStockList.get(i);         //This is a candidate for a name change
 
-			// If there is a stock with the phones ISBN, the phone is not available
+			// If there is a stock with the phones, the phone is not available
 
 			if ( curphone.getBrand().toLowerCase().equals(curstock.getBrand().toLowerCase())) {           //This is a candidate for a name change
 
@@ -660,13 +660,13 @@ public class Reasoner {
 			}
 		}
 
-		// check all stocks if they contain the phones ISBN
+		// check all stocks if they contain the phones
 
 		for (int i = 0; i < theStockList.size(); i++) {
 
 			Stock curstock = (Stock) theStockList.get(i);         //This is a candidate for a name change
 
-			// If there is a stock with the phones ISBN, the phone is not available
+			// If there is a stock with the phones, the phone is not available
 
 			if ( curtablet.getBrand().toLowerCase().equals(curstock.getBrand().toLowerCase())) {           //This is a candidate for a name change
 
@@ -678,10 +678,10 @@ public class Reasoner {
 		}
 
 		if(available){
-			answer="can stock the tablet.";
+			answer="We have that product in stock.";
 		}
 		else{ 
-			answer="cannot stock the tablet as someone else has lent it at the moment.";
+			answer="We do not have that product in stock.";
 		}
 
 		URL = "http://wordnetweb.princeton.edu/perl/webwn?o2=&o0=1&o8=1&o1=1&o7=&o5=&o9=&o6=&o3=&o4=&s="
@@ -734,7 +734,7 @@ public class Reasoner {
 			for (int i = 0; i < thelist.size(); i++) {
 				Customer curmem = (Customer) thelist.get(i);               //This is a candidate for a name change
 				listemall = listemall + "<li>"                         //This is a candidate for a name change
-						+ (curmem.getSurname() + " " + curmem.getLastname() + "</li>");  //This is a candidate for a name change
+						+ (curmem.getFirstname() + " " + curmem.getLastname() + "</li>");  //This is a candidate for a name change
 			}
 		}
 
@@ -805,7 +805,7 @@ public class Reasoner {
 		if (thelist == theCustomerList) {                                      //This is a candidate for a name change
 			for (int i = 0; i < thelist.size(); i++) {
 				Customer curmem = (Customer) thelist.get(i);                      //This is a candidate for a name change
-				if (input.contains(curmem.getSurname().toLowerCase())         //This is a candidate for a name change
+				if (input.contains(curmem.getFirstname().toLowerCase())         //This is a candidate for a name change
 						|| input.contains(curmem.getLastname().toLowerCase()) //This is a candidate for a name change
 						|| input.contains(curmem.getCity().toLowerCase())) {  //This is a candidate for a name change
 
@@ -973,7 +973,7 @@ public class Reasoner {
 
 					Customer curcustomer = (Customer) thelist.get(i);         				  //This is a candidate for a name change
 
-					if (input.contains(curcustomer.getSurname().toLowerCase())              //This is a candidate for a name change
+					if (input.contains(curcustomer.getFirstname().toLowerCase())              //This is a candidate for a name change
 							|| input.contains(curcustomer.getLastname().toLowerCase())      //This is a candidate for a name change
 							|| input.contains(curcustomer.getCustomerid().toLowerCase())) {   //This is a candidate for a name change
 
@@ -1112,7 +1112,7 @@ public class Reasoner {
 
 					Customer curcustomer = (Customer) thelist.get(i);         				  //This is a candidate for a name change
 
-					if (input.contains(curcustomer.getSurname().toLowerCase())              //This is a candidate for a name change
+					if (input.contains(curcustomer.getFirstname().toLowerCase())              //This is a candidate for a name change
 							|| input.contains(curcustomer.getLastname().toLowerCase())      //This is a candidate for a name change
 							|| input.contains(curcustomer.getCustomerid().toLowerCase())) {   //This is a candidate for a name change
 
@@ -1251,7 +1251,7 @@ public class Reasoner {
 
 					Customer curcustomer = (Customer) thelist.get(i);         				  //This is a candidate for a name change
 
-					if (input.contains(curcustomer.getSurname().toLowerCase())              //This is a candidate for a name change
+					if (input.contains(curcustomer.getFirstname().toLowerCase())              //This is a candidate for a name change
 							|| input.contains(curcustomer.getLastname().toLowerCase())      //This is a candidate for a name change
 							|| input.contains(curcustomer.getCustomerid().toLowerCase())) {   //This is a candidate for a name change
 
@@ -1390,7 +1390,7 @@ public class Reasoner {
 
 					Customer curcustomer = (Customer) thelist.get(i);         				  //This is a candidate for a name change
 
-					if (input.contains(curcustomer.getSurname().toLowerCase())              //This is a candidate for a name change
+					if (input.contains(curcustomer.getFirstname().toLowerCase())              //This is a candidate for a name change
 							|| input.contains(curcustomer.getLastname().toLowerCase())      //This is a candidate for a name change
 							|| input.contains(curcustomer.getCustomerid().toLowerCase())) {   //This is a candidate for a name change
 
@@ -1529,7 +1529,7 @@ public class Reasoner {
 
 					Customer curcustomer = (Customer) thelist.get(i);         				  //This is a candidate for a name change
 
-					if (input.contains(curcustomer.getSurname().toLowerCase())              //This is a candidate for a name change
+					if (input.contains(curcustomer.getFirstname().toLowerCase())              //This is a candidate for a name change
 							|| input.contains(curcustomer.getLastname().toLowerCase())      //This is a candidate for a name change
 							|| input.contains(curcustomer.getCustomerid().toLowerCase())) {   //This is a candidate for a name change
 
@@ -1668,7 +1668,7 @@ public class Reasoner {
 
 					Customer curcustomer = (Customer) thelist.get(i);         				  //This is a candidate for a name change
 
-					if (input.contains(curcustomer.getSurname().toLowerCase())              //This is a candidate for a name change
+					if (input.contains(curcustomer.getFirstname().toLowerCase())              //This is a candidate for a name change
 							|| input.contains(curcustomer.getLastname().toLowerCase())      //This is a candidate for a name change
 							|| input.contains(curcustomer.getCustomerid().toLowerCase())) {   //This is a candidate for a name change
 
@@ -1807,7 +1807,7 @@ public class Reasoner {
 
 					Customer curcustomer = (Customer) thelist.get(i);         				  //This is a candidate for a name change
 
-					if (input.contains(curcustomer.getSurname().toLowerCase())              //This is a candidate for a name change
+					if (input.contains(curcustomer.getFirstname().toLowerCase())              //This is a candidate for a name change
 							|| input.contains(curcustomer.getLastname().toLowerCase())      //This is a candidate for a name change
 							|| input.contains(curcustomer.getCustomerid().toLowerCase())) {   //This is a candidate for a name change
 

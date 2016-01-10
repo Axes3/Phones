@@ -9,10 +9,10 @@
 	<housenumber>1</housenumber>
 	<postcode>TN29 9NB</postcode>	
 	<Phone>                                       <!-- An Instance of a phone -->
-		<pid>Dostoyjewski</pid>              <!-- And its attributes -->
-		<name>War and Peace</name>
-		<brand>12345Sn</brand>
-		<description>shelf 3 row 4</description>
+		<pid>phone1</pid>              <!-- And its attributes -->
+		<name>nexus 5s</name>
+		<brand>Google</brand>
+		<description>Google's latest nexus phone</description>
 		<stock>001</stock>
 		<battery>64</battery>
 		<os>Android</os>
@@ -22,23 +22,23 @@
 		<cost>360</cost>
 	</Phone>
 	<Phone>
-		<pid>Herbert George Wells</pid>
-		<name>The war of the worlds</name>
-		<brand>12345Sn4567</brand>
-		<description>shelf 4 row 5</description>
+		<pid>phone2</pid>
+		<name>Iphone 6s</name>
+		<brand>Apple</brand>
+		<description>Apples latest iphone</description>
 		<stock>null</stock>
 		<battery>64</battery>
-		<os>android</os>
+		<os>IOS</os>
 		<capacity>48Gb</capacity>
 		<colour>blue</colour>
 		<camerapixels>18</camerapixels>
 		<cost>420</cost>		
 	</Phone>
 	<Phone>
-		<pid>Herbert George Wells</pid>
-		<name>The time machine</name>
-		<brand>375954Fe4599</brand>
-		<description>shelf 7 row 11</description>
+		<pid>phone3</pid>
+		<name>sasmung 7s</name>
+		<brand>samsung</brand>
+		<description>Samsungs latest android phone</description>
 		<stock>null</stock>
 		<battery>64</battery>
 		<os>android</os>
@@ -50,7 +50,7 @@
 	
 	
 	<Customer>
-		<surname>Joe</surname>
+		<firstname>Joe</firstname>
 		<lastname>Average</lastname>
 		<age>25</age>
 		<customerid>J_AV_25</customerid>
@@ -61,7 +61,7 @@
 	    <hasstock>null</hasstock>
 	</Customer>
 	<Customer>
-		<surname>Susan</surname>
+		<firstname>Susan</firstname>
 		<lastname>Someone</lastname>
 		<age>68</age>
 		<customerid>S_SO_68</customerid>
@@ -72,7 +72,7 @@
 	    <hasstock>001</hasstock>
 	</Customer>
 	<Customer>
-		<surname>Tim</surname>
+		<firstname>Tim</firstname>
 		<lastname>Buktu</lastname>
 		<age>18</age>
 		<customerid>T_BU_99</customerid>
