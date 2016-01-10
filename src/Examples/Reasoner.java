@@ -99,7 +99,8 @@ public class Reasoner {
 		customersyn.add("dude");
 		customersyn.add("man");
 		customersyn.add("guy");
-
+		customersyn.add("babe");
+		customersyn.add("darling");
 
 
 		stocksyn.add(" stock");   //All of the following is a candidate for a name change
