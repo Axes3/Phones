@@ -206,17 +206,18 @@ public class Reasoner {
 
 		{
 			questiontype = "intent";
-			System.out.println("Find PhoneAvailability");
+			System.out.println("Find Phone Availability");
 		}
 		
 		if (input.contains("thank you") 
 				|| input.contains("bye")
 				|| input.contains("thanks")
-				|| input.contains("cool thank")) 			
+				|| input.contains("cool thank")
+				|| input.contains("Domo Arigato")
+				|| input.contains("Danke schon")) 			
 
 		{
 			questiontype = "farewell";
-			System.out.println("farewell");
 		}
 
 
