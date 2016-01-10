@@ -133,5 +133,16 @@
 		<camerapixels>13</camerapixels>
 		<cost>360</cost>
 	</Tablet>
+	
+	<Review>
+		<reviewid>review1</reviewid>
+		<customerid>001</customerid>
+		<post>this is a first review</post>
+	</Review>
+	<Review>
+		<reviewid>review2</reviewid>
+		<customerid>002</customerid>
+		<post>this is second review</post>
+	</Review>
 
 </myphonelibrary>     <!-- closing the one phonelibraryobject conatining alle the info -->

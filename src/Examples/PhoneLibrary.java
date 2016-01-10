@@ -36,6 +36,7 @@ import javax.xml.bind.annotation.XmlType;
  *         &lt;element name="Customer" type="{}Customer" maxOccurs="unbounded"/>
  *         &lt;element name="Stock" type="{}Stock" maxOccurs="unbounded"/>
  *         &lt;element name="Tablet" type="{}Tablet" maxOccurs="unbounded"/>
+ *         &lt;element name="Review" type="{}Review" maxOccurs="unbounded"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -54,7 +55,8 @@ import javax.xml.bind.annotation.XmlType;
     "phone",
     "customer",
     "stock",
-	"tablet"
+	"tablet",
+	"review"
 })
 public class PhoneLibrary {
 
@@ -72,11 +74,12 @@ public class PhoneLibrary {
     protected List<Phone> phone;
     @XmlElement(name = "Customer", required = true)
     protected List<Customer> customer;
-    
     @XmlElement(name = "Stock", required = true)
     protected List<Stock> stock;
     @XmlElement(name = "Tablet", required = true)
     protected List<Tablet> tablet;
+    @XmlElement(name = "Review", required = true)
+    protected List<Review> review;
 
     /**
      * Gets the value of the name property.
@@ -314,5 +317,35 @@ public class PhoneLibrary {
         }
         return this.tablet;
     }
+	
+    /**
+     * Gets the value of the review property.
+     * 
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the review property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getPhone().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link Review }
+     * 
+     * 
+     */
+    public List<Review> getReview() {
+        if (review == null) {
+            review = new ArrayList<Review>();
+        }
+        return this.review;
+    }
+
 
 }
