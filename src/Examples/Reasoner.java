@@ -10,6 +10,7 @@ import Examples.PhoneLibrary;
 import Examples.Phone;
 import Examples.Customer;
 import Examples.Stock;
+import Examples.Tablet;
 
 import Examples.SimpleGUI;
 
@@ -502,7 +503,7 @@ public class Reasoner {
 				||(questiontype == "intent" && classtype == theRecentThing)) {
 
 			// is the tablet in stock or not
-			answer=("You "+ TabletAvailable(classtype, input));
+			answer=(TabletAvailable(classtype, input));
 			Answered = 1; // An answer was given
 		}		
 		
