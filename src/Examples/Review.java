@@ -40,7 +40,8 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "Review", propOrder = {
     "reviewid",
     "customerid",
-    "post"
+    "post",
+    "pid"
 })
 public class Review {
 
@@ -50,6 +51,8 @@ public class Review {
     protected String customerid;
     @XmlElement(required = true)
     protected String post;
+    @XmlElement(required = true)
+    protected String pid;
 
     /**
      * Gets the value of the reviewid property.
@@ -122,7 +125,27 @@ public class Review {
     public void setPost(String value) {
         this.post = value;
     }
+    /**
+     * Gets the value of the pid property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getPid() {
+        return pid;
+    }
 
-	
-
+    /**
+     * Sets the value of the pid property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setPid(String value) {
+        this.pid = value;
+    }
 }
