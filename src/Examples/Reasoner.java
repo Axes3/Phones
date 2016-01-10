@@ -402,7 +402,7 @@ public class Reasoner {
 						.get(1)));
 				System.out.println("Classtype List = "
 						+ classtype.getClass().getSimpleName());
-				System.out.println("Index in Liste = "
+				System.out.println("Index in List = "
 						+ Integer.valueOf(check.get(1)));
 				Currentindex = Integer.valueOf(check.get(1));
 				theRecentThing.clear(); // Clear it before adding (changing) the
@@ -416,8 +416,8 @@ public class Reasoner {
 		if (questiontype == "description") {   // We always expect a pronomial question to refer to the last
 											// object questioned for
 
-			answer=("You can find the "
-					+ classtype.get(0).getClass().getSimpleName() + " " + "at "
+			answer=("The description of  "
+					+ classtype.get(0).getClass().getSimpleName() + " " + "is "
 					+ Description(classtype, input));
 
 			Answered = 1; // An answer was given
@@ -903,7 +903,7 @@ public class Reasoner {
 		return yesorno;
 	}
 
-	//  Method to retrieve the battery information from the object (Where is...) kind
+	//  Method to retrieve the battery information from the object (life) kind
 
 	public String Battery(List classtypelist, String input) {
 
