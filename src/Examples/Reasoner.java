@@ -297,28 +297,26 @@ public class Reasoner {
 		}}
 		
 		if(foundSubject==false){
-			for (int x = 0; x < customersyn.size(); x++) {  //This is a candidate for a name change
-				if (input.contains(customersyn.get(x))) {   //This is a candidate for a name change
-					classtype = theCustomerList;            //This is a candidate for a name change
-					foundSubject=true;
-					input = input.replace(customersyn.get(x), "<b>"+customersyn.get(x)+"</b>");
-					
-					subjectcounter = 1;
-					System.out.println("Class type Customer recognised.");
-					break;
-				}
+		for (int x = 0; x < customersyn.size(); x++) {  //This is a candidate for a name change
+			if (input.contains(customersyn.get(x))) {   //This is a candidate for a name change
+				classtype = theCustomerList;            //This is a candidate for a name change
+				
+				input = input.replace(customersyn.get(x), "<b>"+customersyn.get(x)+"</b>");
+				
+				subjectcounter = 1;
+				System.out.println("Class type Customer recognised.");
+			}
 		}}
 		
 		if(foundSubject==false){
 		for (int x = 0; x < stocksyn.size(); x++) {  //This is a candidate for a name change
 			if (input.contains(stocksyn.get(x))) {   //This is a candidate for a name change
 				classtype = theStockList;            //This is a candidate for a name change
-				foundSubject=true;
+				
 				input = input.replace(stocksyn.get(x), "<b>"+stocksyn.get(x)+"</b>");
 				
 				subjectcounter = 1;	
 				System.out.println("Class type Stock recognised.");
-				break;
 			}
 		}}
 		
@@ -326,12 +324,11 @@ public class Reasoner {
 		for (int x = 0; x < tabletsyn.size(); x++) {   //This is a candidate for a name change
 			if (input.contains(tabletsyn.get(x))) {    //This is a candidate for a name change
 				classtype = theTabletList;             //This is a candidate for a name change
-				foundSubject=true;
+				
 				input = input.replace(tabletsyn.get(x), "<b>"+tabletsyn.get(x)+"</b>");
 				
 				subjectcounter = 1;
 				System.out.println("Class type Tablet recognised.");
-				break;
 			}
 		}}
 		
