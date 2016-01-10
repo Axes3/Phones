@@ -209,6 +209,14 @@ public class Reasoner {
 			System.out.println("Find Phone Availability");
 		}
 		
+		if (input.contains("cake") )
+				
+
+		{
+			questiontype = "cake";
+			
+		}
+		
 		if (input.contains("thank you") 
 				|| input.contains("bye")
 				|| input.contains("thanks")
@@ -366,7 +374,12 @@ public class Reasoner {
 
 			Answered = 1; // An answer was given
 		}	
-		
+		if (questiontype == "cake") {  
+
+			answer=("The cake is a lie");
+
+			Answered = 1; // An answer was given
+		}	
 		// Description Question in Pronomial form "Where can i find it"
 
 		if (questiontype == "battery") {   // We always expect a pronomial question to refer to the last
@@ -1083,7 +1096,7 @@ public class Reasoner {
 			if (curphone.getPid().equalsIgnoreCase("dostoyjewski")) {     // check for the author //This is a candidate for a name change
 
 				answer = "Phone by : " + curphone.getPid() + "\n"  //This is a candidate for a name change
-						+ " Phone Model: " + curphone.getName()      //This is a candidate for a name change
+						+ " Phone Model: " + curphone.getBrand()      //This is a candidate for a name change
 						+ ".";
 			}
 		}
