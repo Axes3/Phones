@@ -30,6 +30,12 @@ import javax.xml.bind.annotation.XmlType;
  *         &lt;element name="brand" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="description" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="stock" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="battery" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="os" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="capacity" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="colour" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="camerapixels" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="cost" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -44,7 +50,13 @@ import javax.xml.bind.annotation.XmlType;
     "name",
     "brand",
     "description",
-    "stock"
+    "stock",
+	"battery",
+	"os",
+	"capacity",
+	"colour",
+	"camerapixels",
+	"cost"
 })
 public class Tablet {
 
@@ -58,6 +70,18 @@ public class Tablet {
     protected String description;
     @XmlElement(required = true)
     protected String stock;
+    @XmlElement(required = true)
+    protected String battery;
+    @XmlElement(required = true)
+    protected String os;
+    @XmlElement(required = true)
+    protected String capacity;
+    @XmlElement(required = true)
+    protected String colour;
+    @XmlElement(required = true)
+    protected String camerapixels;
+    @XmlElement(required = true)
+    protected String cost;
 
     /**
      * Gets the value of the pid property.
@@ -177,6 +201,156 @@ public class Tablet {
      */
     public void setStock(String value) {
         this.stock = value;
+    }
+	
+    /**
+     * Gets the value of the battery property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getBattery() {
+        return battery;
+    }
+
+    /**
+     * Sets the value of the battery property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setBattery(String value) {
+        this.battery = value;
+		
+    }
+
+    /**
+     * Gets the value of the os property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getOs() {
+        return os;
+    }
+
+    /**
+     * Sets the value of the os property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setOs(String value) {
+        this.os = value;
+		
+    }
+	
+    /**
+     * Gets the value of the capacity property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getCapacity() {
+        return capacity;
+    }
+
+    /**
+     * Sets the value of the capacity property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setCapacity(String value) {
+        this.capacity = value;
+		
+    }
+	
+    /**
+     * Gets the value of the colour property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getColour() {
+        return colour;
+    }
+
+    /**
+     * Sets the value of the colour property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setColour(String value) {
+        this.colour = value;
+		
+    }
+	
+    /**
+     * Gets the value of the camerapixels property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getCamerapixels() {
+        return camerapixels;
+    }
+
+    /**
+     * Sets the value of the camerapixels property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setCamerapixels(String value) {
+        this.camerapixels = value;
+		
+    }
+	
+    /**
+     * Gets the value of the cost property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getCost() {
+        return cost;
+    }
+
+    /**
+     * Sets the value of the cost property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setCost(String value) {
+        this.cost = value;
+		
     }
 	
 
