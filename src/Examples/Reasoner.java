@@ -34,6 +34,7 @@ public class Reasoner {
 	public List theCustomerList = new ArrayList();  //This is a candidate for a name change
 	public List theStockList = new ArrayList(); //This is a candidate for a name change
 	public List theRecentThing = new ArrayList();
+	public List theReviewList = new ArrayList();
 	public List theTabletList = new ArrayList();    //This is a candidate for a name change
 	public static int error = 0;
 	// Gazetteers to store synonyms for the domain entities names
@@ -41,9 +42,10 @@ public class Reasoner {
 	public Vector<String> phonelibrarysyn = new Vector<String>();  //This is a candidate for a name change
 	public Vector<String> phonesyn = new Vector<String>();     //This is a candidate for a name change
 	public Vector<String> customersyn = new Vector<String>();   //This is a candidate for a name change
-	public Vector<String> stocksyn = new Vector<String>();  //This is a candidate for a name change
+	public Vector<String> reviewsyn = new Vector<String>();   
+	public Vector<String> stocksyn = new Vector<String>();  
 	public Vector<String> recentobjectsyn = new Vector<String>();
-	public Vector<String> tabletsyn = new Vector<String>();     //This is a candidate for a name change
+	public Vector<String> tabletsyn = new Vector<String>();     
 
 	public String questiontype = "";         // questiontype selects method to use in a query
 	public List classtype = new ArrayList(); // classtype selects which class list to query
@@ -103,6 +105,9 @@ public class Reasoner {
 		customersyn.add("babe");
 		customersyn.add("darling");
 
+		reviewsyn.add("review");    
+		reviewsyn.add("thinghy");
+		reviewsyn.add("revew");
 
 		stocksyn.add("stock");   //All of the following is a candidate for a name change
 
@@ -123,6 +128,7 @@ public class Reasoner {
 			theCustomerList = thephonelibrary.getCustomer(); 	//This is a candidate for a name change
 			theStockList = thephonelibrary.getStock(); 	//This is a candidate for a name change
 			theTabletList = thephonelibrary.getTablet();  		//This is a candidate for a name change
+			theReviewList = thephonelibrary.getReview();  
 			thePhoneLibraryList.add(thephonelibrary);             // force it to be a List, //This is a candidate for a name change
 
 			System.out.println("List reading");
@@ -295,6 +301,19 @@ public class Reasoner {
 			
 			}
 		}}
+		
+		if(foundSubject==false){
+			for (int x = 0; x < reviewsyn.size(); x++) {   //This is a candidate for a name change
+				if (input.contains(reviewsyn.get(x))) {    //This is a candidate for a name change
+					classtype = theReviewList;             //This is a candidate for a name change
+					foundSubject=true;
+					input = input.replace(reviewsyn.get(x), "<b>"+reviewsyn.get(x)+"</b>");
+					
+					subjectcounter = 1;
+					System.out.println("Class type review recognised.");
+				
+				}
+			}}
 		
 		if(foundSubject==false){
 			for (int x = 0; x < customersyn.size(); x++) {  //This is a candidate for a name change
@@ -754,6 +773,12 @@ public class Reasoner {
 			for (int i = 0; i < thelist.size(); i++) {
 				Phone curphone = (Phone) thelist.get(i);                  //This is a candidate for a name change
 				listemall = listemall + "<li>" + (curphone.getName() + "</li>");    //This is a candidate for a name change
+			}
+		}
+		if (thelist == theReviewList) {                                  //This is a candidate for a name change
+			for (int i = 0; i < thelist.size(); i++) {
+				Review currev = (Review) thelist.get(i);                  //This is a candidate for a name change
+				listemall = listemall + "<li>" + (currev.getPid()+" "+currev.getPost() + "</li>");    //This is a candidate for a name change
 			}
 		}
 
