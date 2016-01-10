@@ -371,8 +371,8 @@ public class Reasoner {
 		if (questiontype == "battery") {   // We always expect a pronomial question to refer to the last
 											// object questioned for
 
-			answer=("You can find the "
-					+ classtype.get(0).getClass().getSimpleName() + " " + "at "
+			answer=("The battery life of  "
+					+ classtype.get(0).getClass().getSimpleName() + " " + "is "
 					+ Battery(classtype, input));
 
 			Answered = 1; // An answer was given

@@ -25,7 +25,7 @@
 		<name>The war of the worlds</name>
 		<brand>12345Sn4567</brand>
 		<description>shelf 4 row 5</description>
-		<stock>null</stock>
+		<stock>null</stock>j
 		<battery>64</battery>
 		<os>android</os>
 		<capacity>48Gb</capacity>
@@ -125,6 +125,10 @@
 		<brand>312312131312123123</brand>
 		<description>samsung firestick ripoff</description>
 		<stock>null</stock>
+		<battery>100</battery>
+		<os>IOS</os>
+		<capacity>200Gb</capacity>
+		<colour>red</colour>
 	</Tablet>
 	<Tablet>
 		<pid>tablet1</pid>
@@ -132,6 +136,10 @@
 		<brand>312312131312</brand>
 		<description>amazon firestick</description>
 		<stock>null</stock>
+		<battery>100</battery>
+		<os>IOS</os>
+		<capacity>200Gb</capacity>
+		<colour>red</colour>
 	</Tablet>
 
 </myphonelibrary>     <!-- closing the one phonelibraryobject conatining alle the info -->
