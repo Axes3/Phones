@@ -9,21 +9,21 @@
 	<housenumber>1</housenumber>
 	<postcode>TN29 9NB</postcode>	
 	<Phone>                                       <!-- An Instance of a phone -->
-		<pid>phone1</pid>              <!-- And its attributes -->
+		<pid>001</pid>              <!-- And its attributes -->
 		<name>nexus 5s</name>
 		<brand>Google</brand>
 		<description>Google's latest nexus phone</description>
 		<stock>001</stock>
 		<battery>64</battery>
-		<os>Android</os>
+		<os>android</os>
 		<capacity>48Gb</capacity>
 		<colour>blue</colour>
 		<camerapixels>13</camerapixels>
 		<cost>360</cost>
 	</Phone>
 	<Phone>
-		<pid>phone2</pid>
-		<name>Iphone 6s</name>
+		<pid>002</pid>
+		<name>iphone 6s</name>
 		<brand>Apple</brand>
 		<description>Apples latest iphone</description>
 		<stock>null</stock>
@@ -35,9 +35,9 @@
 		<cost>420</cost>		
 	</Phone>
 	<Phone>
-		<pid>phone3</pid>
-		<name>sasmung 7s</name>
-		<brand>samsung</brand>
+		<pid>003</pid>
+		<name>samsung 7s</name>
+		<brand>Samsung</brand>
 		<description>Samsungs latest android phone</description>
 		<stock>null</stock>
 		<battery>64</battery>
@@ -108,20 +108,20 @@
 	</Stock>
 	
 	<Tablet>
-		<pid>tablet1</pid>
-		<name>Samsung</name>
-		<brand>312312131312123123</brand>
-		<description>Samsung</description>
+		<pid>004</pid>
+		<name>samsung Galaxy Tablet</name>
+		<brand>samsung</brand>
+		<description>Samsung Tablet</description>
 		<stock>null</stock>
 		<battery>100</battery>
-		<os>IOS</os>
+		<os>Android</os>
 		<capacity>200Gb</capacity>
-		<colour>red</colour>
+		<colour>white</colour>
 		<camerapixels>25</camerapixels>
 		<cost>400</cost>
 	</Tablet>
 	<Tablet>
-		<pid>tablet1</pid>
+		<pid>004</pid>
 		<name>Amazon Fire 7</name>
 		<brand>Amazon</brand>
 		<description>Incredibly thin and light, the Fire 7 comes equipped with a 7-inch IPS display (1024x600), which offers a great viewing experience.</description>
@@ -135,14 +135,16 @@
 	</Tablet>
 	
 	<Review>
-		<reviewid>review1</reviewid>
-		<customerid>001</customerid>
+		<reviewid>0001</reviewid>
+		<customerid>J_AV_25</customerid>
 		<post>this is a first review</post>
+		<pid>001</pid>
 	</Review>
 	<Review>
-		<reviewid>review2</reviewid>
-		<customerid>002</customerid>
+		<reviewid>0002</reviewid>
+		<customerid>J_AV_25</customerid>
 		<post>this is second review</post>
+		<pid>003</pid>
 	</Review>
 
 </myphonelibrary>     <!-- closing the one phonelibraryobject conatining alle the info -->
