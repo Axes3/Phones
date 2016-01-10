@@ -120,7 +120,7 @@ public class SimpleGUI {
 				
 		answers = myReasoner.generateAnswer(question);
 	
-		displaytext = "<font color=\"black\" face=\"BellMT ,BellMT\"> <strong>*INSERT NAME HERE*: </strong>" + answers.get(0)+
+		displaytext = "<font color=\"black\" face=\"BellMT ,BellMT\"> <strong>XxXHelios360NoScopeXxX:</strong>" + answers.get(0)+
 				       "</font>"+"<br><font COLOR=\"green\" face=\"BellMT, BellMT\">" + 
 				       answers.get(1) + "</font><br>";	
 		
