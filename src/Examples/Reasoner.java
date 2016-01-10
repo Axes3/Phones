@@ -257,8 +257,6 @@ public class Reasoner {
 		}
 		
 		if (input.contains("cake") )
-				
-
 		{
 			questiontype = "cake";
 			
@@ -419,7 +417,6 @@ public class Reasoner {
 			answer=("You can find the "
 					+ classtype.get(0).getClass().getSimpleName() + " " + "at "
 					+ Description(classtype, input));
-
 			Answered = 1; // An answer was given
 		}	
 		if (questiontype == "cake") {  
@@ -510,7 +507,7 @@ public class Reasoner {
 		if (questiontype == "farewell") {       // Reply to a farewell
 			
 			answer=("You are welcome.");
-
+			
 			Answered = 1; // An answer was given
 		}
 		
