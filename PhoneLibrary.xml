@@ -120,7 +120,7 @@
 	
 	<Tablet>
 		<pid>tablet1</pid>
-		<name>Samsung </name>
+		<name>Samsung</name>
 		<brand>312312131312123123</brand>
 		<description>Samsung</description>
 		<stock>null</stock>
