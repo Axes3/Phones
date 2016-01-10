@@ -92,6 +92,7 @@ public class SimpleGUI {
 
 		Main.pack();
 		Main.setSize(1200, 800);
+		Main.setResizable(false);
 		Main.setVisible(true);                               // Don't forget
 		
 		dialoghistory.add("<H2>Welcome to the Possible Phone Helpdesk, please type your question.</H2>" +
