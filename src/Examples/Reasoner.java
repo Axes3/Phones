@@ -237,13 +237,13 @@ public class Reasoner {
 			System.out.println("cost");
 		}
 		
-		if (input.contains("can i stock") 
-				|| input.contains("can i borrow")
+		if (input.contains("can i buy") 
+				|| input.contains("can i have")
 				|| input.contains("can i get the phone")
 				|| input.contains("am i able to")
-				|| input.contains("could i stock") 
-				|| input.contains("i want to stock")
-				|| input.contains("i want to borrow"))
+				|| input.contains("could i buy") 
+				|| input.contains("i want to buy")
+				|| input.contains("i want the"))
 
 		{
 			questiontype = "intent";
@@ -476,15 +476,15 @@ public class Reasoner {
 		if ((questiontype == "intent" && classtype == thePhoneList) 
 				||(questiontype == "intent" && classtype == theRecentThing)) {
 
-			// Can I stock the phone or not (Can I lent "it" or not)
-			answer=("You "+ PhoneAvailable(classtype, input));
+			// is the phone in stock or not
+			answer=(PhoneAvailable(classtype, input));
 			Answered = 1; // An answer was given
 		}
 
 		if ((questiontype == "intent" && classtype == theTabletList) 
 				||(questiontype == "intent" && classtype == theRecentThing)) {
 
-			// Can I stock the phone or not (Can I lent "it" or not)
+			// is the tablet in stock or not
 			answer=("You "+ TabletAvailable(classtype, input));
 			Answered = 1; // An answer was given
 		}		
@@ -589,10 +589,10 @@ public class Reasoner {
 		}
 
 		if(available){
-			answer="can stock the phone.";
+			answer="We have that product in stock.";
 		}
 		else{ 
-			answer="cannot stock the phone as someone else has lent it at the moment.";
+			answer="We do not have that product in stock.";
 		}
 
 		URL = "http://wordnetweb.princeton.edu/perl/webwn?o2=&o0=1&o8=1&o1=1&o7=&o5=&o9=&o6=&o3=&o4=&s="
