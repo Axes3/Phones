@@ -436,8 +436,15 @@ public class Reasoner {
 			Answered = 1; // An answer was given
 		}	
 		if (questiontype == "cake") {  
-
+			double hey=Math.random();
+			if (hey<0.5)
 			answer=("The cake is a lie");
+			else
+			answer=("____,,,,,"+
+                "<br/>____|||||_ "+
+                "<br/>__{~*~*~*~}"+
+                "<br/>__{*~*~*~*}__ "+
+                "<br/>`-------------` ");
 
 			Answered = 1; // An answer was given
 		}
