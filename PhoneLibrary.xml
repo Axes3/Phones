@@ -140,5 +140,10 @@
 		<post>Awesome device but needs more clash of clans</post>
 		<pid>003</pid>
 	</Review>
-
+	<Review>
+		<reviewid>0003</reviewid>
+		<customerid>J_AV_25</customerid>
+		<post>Its an ok device</post>
+		<pid>001</pid>
+	</Review>
 </myphonelibrary>     <!-- closing the one phonelibraryobject conatining alle the info -->

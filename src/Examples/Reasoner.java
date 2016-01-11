@@ -274,7 +274,7 @@ public class Reasoner {
 				|| input.contains("thanks")
 				|| input.contains("cool thank")
 				|| input.contains("k thx bye")
-				|| input.contains("Domo Arigato")
+				|| input.contains("sayonara")
 				|| input.contains("Danke schon")) 			
 
 		{
