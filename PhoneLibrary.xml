@@ -89,22 +89,16 @@
 		<stockid>001</stockid>
 		<customerid>S_SO_68</customerid>
 		<brand>Google</brand>
-		<startdate>01102011</startdate>
-		<enddate>22102011</enddate>	
 	</Stock>
 	<Stock>
 		<stockid>002</stockid>
 		<customerid>S_SO_68</customerid>
 		<brand>12345XZ</brand>
-		<startdate>01102011</startdate>
-		<enddate>22102011</enddate>	
 	</Stock>
 	<Stock>
 		<stockid>003</stockid>
 		<customerid>S_SO_68</customerid>
 		<brand>0372</brand>
-		<startdate>01102011</startdate>
-		<enddate>22102011</enddate>	
 	</Stock>
 	
 	<Tablet>
