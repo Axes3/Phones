@@ -28,6 +28,7 @@ import javax.xml.bind.annotation.XmlType;
  *         &lt;element name="reviewid" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="customerid" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="post" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="pid" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>

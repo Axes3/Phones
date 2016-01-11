@@ -27,8 +27,6 @@ import javax.xml.bind.annotation.XmlType;
  *         &lt;element name="stockid" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="customerid" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="brand" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *         &lt;element name="startdate" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *         &lt;element name="enddate" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -41,9 +39,7 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "Stock", propOrder = {
     "stockid",
     "customerid",
-    "brand",
-    "startdate",
-    "enddate"
+    "brand"
 })
 public class Stock {
 
@@ -53,10 +49,7 @@ public class Stock {
     protected String customerid;
     @XmlElement(required = true)
     protected String brand;
-    @XmlElement(required = true)
-    protected String startdate;
-    @XmlElement(required = true)
-    protected String enddate;
+    
 
     /**
      * Gets the value of the stockid property.
@@ -129,53 +122,4 @@ public class Stock {
     public void setBrand(String value) {
         this.brand = value;
     }
-
-    /**
-     * Gets the value of the startdate property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getStartdate() {
-        return startdate;
-    }
-
-    /**
-     * Sets the value of the startdate property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setStartdate(String value) {
-        this.startdate = value;
-    }
-
-    /**
-     * Gets the value of the enddate property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getEnddate() {
-        return enddate;
-    }
-
-    /**
-     * Sets the value of the enddate property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setEnddate(String value) {
-        this.enddate = value;
-    }
-
 }

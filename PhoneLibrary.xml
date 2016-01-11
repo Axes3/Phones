@@ -93,24 +93,12 @@
 	<Stock>
 		<stockid>002</stockid>
 		<customerid>S_SO_68</customerid>
-<<<<<<< HEAD
-		<brand>12345XZ</brand>
-=======
 		<brand>Samsung</brand>
-		<startdate>01102011</startdate>
-		<enddate>22102011</enddate>	
->>>>>>> 4cd5a977417e706150c60cf831f3c0bdfe0515bf
 	</Stock>
 	<Stock>
 		<stockid>003</stockid>
 		<customerid>S_SO_68</customerid>
-<<<<<<< HEAD
-		<brand>0372</brand>
-=======
 		<brand>Amazon</brand>
-		<startdate>01102011</startdate>
-		<enddate>22102011</enddate>	
->>>>>>> 4cd5a977417e706150c60cf831f3c0bdfe0515bf
 	</Stock>
 	
 	<Tablet>
