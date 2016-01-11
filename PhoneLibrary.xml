@@ -23,7 +23,7 @@
 	</Phone>
 	<Phone>
 		<pid>002</pid>
-		<name>iphone 6s</name>
+		<name>Apple 6s</name>
 		<brand>Apple</brand>
 		<description>Apples latest iphone</description>
 		<stock>null</stock>
@@ -95,21 +95,21 @@
 	<Stock>
 		<stockid>002</stockid>
 		<customerid>S_SO_68</customerid>
-		<brand>12345XZ</brand>
+		<brand>Samsung</brand>
 		<startdate>01102011</startdate>
 		<enddate>22102011</enddate>	
 	</Stock>
 	<Stock>
 		<stockid>003</stockid>
 		<customerid>S_SO_68</customerid>
-		<brand>0372</brand>
+		<brand>Amazon</brand>
 		<startdate>01102011</startdate>
 		<enddate>22102011</enddate>	
 	</Stock>
 	
 	<Tablet>
 		<pid>004</pid>
-		<name>samsung Galaxy Tablet</name>
+		<name>samsung Galaxy</name>
 		<brand>samsung</brand>
 		<description>Samsung Tablet</description>
 		<stock>null</stock>
@@ -122,7 +122,7 @@
 	</Tablet>
 	<Tablet>
 		<pid>004</pid>
-		<name>Amazon Fire 7</name>
+		<name>Amazon Fire</name>
 		<brand>Amazon</brand>
 		<description>Incredibly thin and light, the Fire 7 comes equipped with a 7-inch IPS display (1024x600), which offers a great viewing experience.</description>
 		<stock>1</stock>
