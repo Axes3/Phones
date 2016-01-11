@@ -146,7 +146,7 @@ public class Reasoner {
 
 		Integer subjectcounter = 0;  // Counter to keep track of # of identified subjects (classes)
 		
-		// Answer Generation Idea: content = Questiontype-method(classtype class) (+optional attribute)
+		
 
 		// ___________________________ IMPORTANT _____________________________
 
@@ -447,7 +447,7 @@ public class Reasoner {
 
 			Answered = 1; // An answer was given
 		}	
-		// Description Question in Pronomial form "Where can i find it"
+		
 
 		if (questiontype == "battery") {   // We always expect a pronomial question to refer to the last
 											// object questioned for
@@ -862,17 +862,7 @@ public class Reasoner {
 
 		
 		if (thelist == theStockList) {                                      
-			for (int i = 0; i < thelist.size(); i++) {
-				Stock curstock = (Stock) thelist.get(i);                   
-				if (input.contains(curstock.getBrand().toLowerCase())           
-					|| input.contains(curstock.getCustomerid().toLowerCase())){  
-
-					counter = i;
-					yesorno.set(0, "Yes we have such a Stock");             
-					yesorno.add(counter.toString());
-					i = thelist.size() + 1;
-				}
-			}
+			yesorno.set(0, "Access denied");
 		}
 		
 		if (thelist == theTabletList) {                          
@@ -915,7 +905,7 @@ public class Reasoner {
 	public String Battery(List classtypelist, String input) {
 
 		List thelist = classtypelist;
-		String battery = "";
+		String battery = "that does not have a battery";
 
 		// if a pronomial was used "it", "them" etc: Reference to the recent thing
 
@@ -937,22 +927,7 @@ public class Reasoner {
 
 			}
 
-			if (theRecentThing.get(0).getClass().getSimpleName()
-					.toLowerCase().equals("customer")) {                
-
-				Customer curmem = (Customer) theRecentThing.get(0);       
-				battery = (curmem.getCity() + " " + curmem.getStreet() + " " + curmem   
-						.getHousenumber());                                     
-
-			}
-
-
-			if (theRecentThing.get(0).getClass().getSimpleName()    
-					.toLowerCase().equals("phonelibrary")) {                   
-
-				battery = (thephonelibrary.getCity() + " " + thephonelibrary.getStreet() + thephonelibrary    
-						.getHousenumber());                                            
-			}
+		
 
 		}
 
@@ -1006,36 +981,7 @@ public class Reasoner {
 				}
 			}
 			
-
-			if (thelist == theCustomerList) {                                          
-
-				int counter = 0;
-
-				for (int i = 0; i < thelist.size(); i++) {
-
-					Customer curcustomer = (Customer) thelist.get(i);         				   
-
-					if (input.contains(curcustomer.getFirstname().toLowerCase())               
-							|| input.contains(curcustomer.getLastname().toLowerCase())       
-							|| input.contains(curcustomer.getCustomerid().toLowerCase())) {    
-
-						counter = i;
-						battery = (curcustomer.getCity() + " ");
-						Currentindex = counter;
-						theRecentThing.clear(); 										// Clear it before adding (changing) the
-						classtype = theCustomerList;            	 						 
-						theRecentThing.add(classtype.get(Currentindex));
-						i = thelist.size() + 1; 				             	        // force break
-					}
-				}
-			}
-
-
-			if (thelist == thePhoneLibraryList) {                                                   
-
-				battery = (thephonelibrary.getCity() + " " + thephonelibrary.getStreet() + thephonelibrary   
-						.getHousenumber());                                                    
-			}
+	
 		}
 
 		URL = "http://wordnetweb.princeton.edu/perl/webwn?o2=&o0=1&o8=1&o1=1&o7=&o5=&o9=&o6=&o3=&o4=&s="
@@ -1054,7 +1000,7 @@ public class Reasoner {
 	public String Os(List classtypelist, String input) {
 
 		List thelist = classtypelist;
-		String os = "";
+		String os = "that does not have an Operating system";
 
 		// if a pronomial was used "it", "them" etc: Reference to the recent thing
 
@@ -1076,22 +1022,7 @@ public class Reasoner {
 
 			}
 
-			if (theRecentThing.get(0).getClass().getSimpleName()
-					.toLowerCase().equals("customer")) {                
 
-				Customer curmem = (Customer) theRecentThing.get(0);       
-				os = (curmem.getCity() + " " + curmem.getStreet() + " " + curmem   
-						.getHousenumber());                                     
-
-			}
-
-
-			if (theRecentThing.get(0).getClass().getSimpleName()    
-					.toLowerCase().equals("phonelibrary")) {                   
-
-				os = (thephonelibrary.getCity() + " " + thephonelibrary.getStreet() + thephonelibrary    
-						.getHousenumber());                                            
-			}
 
 		}
 
@@ -1146,35 +1077,6 @@ public class Reasoner {
 			}
 			
 
-			if (thelist == theCustomerList) {                                          
-
-				int counter = 0;
-
-				for (int i = 0; i < thelist.size(); i++) {
-
-					Customer curcustomer = (Customer) thelist.get(i);         				   
-
-					if (input.contains(curcustomer.getFirstname().toLowerCase())               
-							|| input.contains(curcustomer.getLastname().toLowerCase())       
-							|| input.contains(curcustomer.getCustomerid().toLowerCase())) {    
-
-						counter = i;
-						os = (curcustomer.getCity() + " ");
-						Currentindex = counter;
-						theRecentThing.clear(); 										// Clear it before adding (changing) the
-						classtype = theCustomerList;            	 						 
-						theRecentThing.add(classtype.get(Currentindex));
-						i = thelist.size() + 1; 				             	        // force break
-					}
-				}
-			}
-
-
-			if (thelist == thePhoneLibraryList) {                                                   
-
-				os = (thephonelibrary.getCity() + " " + thephonelibrary.getStreet() + thephonelibrary   
-						.getHousenumber());                                                    
-			}
 		}
 
 		URL = "http://wordnetweb.princeton.edu/perl/webwn?o2=&o0=1&o8=1&o1=1&o7=&o5=&o9=&o6=&o3=&o4=&s="
@@ -1215,22 +1117,7 @@ public class Reasoner {
 
 			}
 
-			if (theRecentThing.get(0).getClass().getSimpleName()
-					.toLowerCase().equals("customer")) {                
 
-				Customer curmem = (Customer) theRecentThing.get(0);       
-				capacity = (curmem.getCity() + " " + curmem.getStreet() + " " + curmem   
-						.getHousenumber());                                     
-
-			}
-
-
-			if (theRecentThing.get(0).getClass().getSimpleName()    
-					.toLowerCase().equals("phonelibrary")) {                   
-
-				capacity = (thephonelibrary.getCity() + " " + thephonelibrary.getStreet() + thephonelibrary    
-						.getHousenumber());                                            
-			}
 
 		}
 
@@ -1285,35 +1172,7 @@ public class Reasoner {
 			}
 			
 
-			if (thelist == theCustomerList) {                                          
 
-				int counter = 0;
-
-				for (int i = 0; i < thelist.size(); i++) {
-
-					Customer curcustomer = (Customer) thelist.get(i);         				   
-
-					if (input.contains(curcustomer.getFirstname().toLowerCase())               
-							|| input.contains(curcustomer.getLastname().toLowerCase())       
-							|| input.contains(curcustomer.getCustomerid().toLowerCase())) {    
-
-						counter = i;
-						capacity = (curcustomer.getCity() + " ");
-						Currentindex = counter;
-						theRecentThing.clear(); 										// Clear it before adding (changing) the
-						classtype = theCustomerList;            	 						 
-						theRecentThing.add(classtype.get(Currentindex));
-						i = thelist.size() + 1; 				             	        // force break
-					}
-				}
-			}
-
-
-			if (thelist == thePhoneLibraryList) {                                                   
-
-				capacity = (thephonelibrary.getCity() + " " + thephonelibrary.getStreet() + thephonelibrary   
-						.getHousenumber());                                                    
-			}
 		}
 
 		URL = "http://wordnetweb.princeton.edu/perl/webwn?o2=&o0=1&o8=1&o1=1&o7=&o5=&o9=&o6=&o3=&o4=&s="
@@ -1332,7 +1191,7 @@ public class Reasoner {
 	public String Colour(List classtypelist, String input) {
 
 		List thelist = classtypelist;
-		String colour = "";
+		String colour = "That does not have a colour";
 
 		// if a pronomial was used "it", "them" etc: Reference to the recent thing
 
@@ -1354,22 +1213,8 @@ public class Reasoner {
 
 			}
 
-			if (theRecentThing.get(0).getClass().getSimpleName()
-					.toLowerCase().equals("customer")) {                
+	
 
-				Customer curmem = (Customer) theRecentThing.get(0);       
-				colour = (curmem.getCity() + " " + curmem.getStreet() + " " + curmem   
-						.getHousenumber());                                     
-
-			}
-
-
-			if (theRecentThing.get(0).getClass().getSimpleName()    
-					.toLowerCase().equals("phonelibrary")) {                   
-
-				colour = (thephonelibrary.getCity() + " " + thephonelibrary.getStreet() + thephonelibrary    
-						.getHousenumber());                                            
-			}
 
 		}
 
@@ -1423,36 +1268,6 @@ public class Reasoner {
 				}
 			}
 			
-
-			if (thelist == theCustomerList) {                                          
-
-				int counter = 0;
-
-				for (int i = 0; i < thelist.size(); i++) {
-
-					Customer curcustomer = (Customer) thelist.get(i);         				   
-
-					if (input.contains(curcustomer.getFirstname().toLowerCase())               
-							|| input.contains(curcustomer.getLastname().toLowerCase())       
-							|| input.contains(curcustomer.getCustomerid().toLowerCase())) {    
-
-						counter = i;
-						colour = (curcustomer.getCity() + " ");
-						Currentindex = counter;
-						theRecentThing.clear(); 										// Clear it before adding (changing) the
-						classtype = theCustomerList;            	 						 
-						theRecentThing.add(classtype.get(Currentindex));
-						i = thelist.size() + 1; 				             	        // force break
-					}
-				}
-			}
-
-
-			if (thelist == thePhoneLibraryList) {                                                   
-
-				colour = (thephonelibrary.getCity() + " " + thephonelibrary.getStreet() + thephonelibrary   
-						.getHousenumber());                                                    
-			}
 		}
 
 		URL = "http://wordnetweb.princeton.edu/perl/webwn?o2=&o0=1&o8=1&o1=1&o7=&o5=&o9=&o6=&o3=&o4=&s="
@@ -1471,7 +1286,7 @@ public class Reasoner {
 	public String Camerapixels(List classtypelist, String input) {
 
 		List thelist = classtypelist;
-		String camerapixels = "";
+		String camerapixels = "That does not have pixels";
 
 		// if a pronomial was used "it", "them" etc: Reference to the recent thing
 
@@ -1493,22 +1308,6 @@ public class Reasoner {
 
 			}
 
-			if (theRecentThing.get(0).getClass().getSimpleName()
-					.toLowerCase().equals("customer")) {                
-
-				Customer curmem = (Customer) theRecentThing.get(0);       
-				camerapixels = (curmem.getCity() + " " + curmem.getStreet() + " " + curmem   
-						.getHousenumber());                                     
-
-			}
-
-
-			if (theRecentThing.get(0).getClass().getSimpleName()    
-					.toLowerCase().equals("phonelibrary")) {                   
-
-				camerapixels = (thephonelibrary.getCity() + " " + thephonelibrary.getStreet() + thephonelibrary    
-						.getHousenumber());                                            
-			}
 
 		}
 
@@ -1561,37 +1360,7 @@ public class Reasoner {
 					}
 				}
 			}
-			
 
-			if (thelist == theCustomerList) {                                          
-
-				int counter = 0;
-
-				for (int i = 0; i < thelist.size(); i++) {
-
-					Customer curcustomer = (Customer) thelist.get(i);         				   
-
-					if (input.contains(curcustomer.getFirstname().toLowerCase())               
-							|| input.contains(curcustomer.getLastname().toLowerCase())       
-							|| input.contains(curcustomer.getCustomerid().toLowerCase())) {    
-
-						counter = i;
-						camerapixels = (curcustomer.getCity() + " ");
-						Currentindex = counter;
-						theRecentThing.clear(); 										// Clear it before adding (changing) the
-						classtype = theCustomerList;            	 						 
-						theRecentThing.add(classtype.get(Currentindex));
-						i = thelist.size() + 1; 				             	        // force break
-					}
-				}
-			}
-
-
-			if (thelist == thePhoneLibraryList) {                                                   
-
-				camerapixels = (thephonelibrary.getCity() + " " + thephonelibrary.getStreet() + thephonelibrary   
-						.getHousenumber());                                                    
-			}
 		}
 
 		URL = "http://wordnetweb.princeton.edu/perl/webwn?o2=&o0=1&o8=1&o1=1&o7=&o5=&o9=&o6=&o3=&o4=&s="
@@ -1610,7 +1379,7 @@ public class Reasoner {
 	public String Cost(List classtypelist, String input) {
 
 		List thelist = classtypelist;
-		String cost = "";
+		String cost = "That does not have a cost";
 
 		// if a pronomial was used "it", "them" etc: Reference to the recent thing
 
@@ -1630,23 +1399,6 @@ public class Reasoner {
 				Tablet curtablet = (Tablet) theRecentThing.get(0);           
 				cost = (curtablet.getCost() + " ");              
 
-			}
-
-			if (theRecentThing.get(0).getClass().getSimpleName()
-					.toLowerCase().equals("customer")) {                
-
-				Customer curmem = (Customer) theRecentThing.get(0);       
-				cost = (curmem.getCity() + " " + curmem.getStreet() + " " + curmem   
-						.getHousenumber());                                     
-
-			}
-
-
-			if (theRecentThing.get(0).getClass().getSimpleName()    
-					.toLowerCase().equals("phonelibrary")) {                   
-
-				cost = (thephonelibrary.getCity() + " " + thephonelibrary.getStreet() + thephonelibrary    
-						.getHousenumber());                                            
 			}
 
 		}
@@ -1702,35 +1454,6 @@ public class Reasoner {
 			}
 			
 
-			if (thelist == theCustomerList) {                                          
-
-				int counter = 0;
-
-				for (int i = 0; i < thelist.size(); i++) {
-
-					Customer curcustomer = (Customer) thelist.get(i);         				   
-
-					if (input.contains(curcustomer.getFirstname().toLowerCase())               
-							|| input.contains(curcustomer.getLastname().toLowerCase())       
-							|| input.contains(curcustomer.getCustomerid().toLowerCase())) {    
-
-						counter = i;
-						cost = (curcustomer.getCity() + " ");
-						Currentindex = counter;
-						theRecentThing.clear(); 										// Clear it before adding (changing) the
-						classtype = theCustomerList;            	 						 
-						theRecentThing.add(classtype.get(Currentindex));
-						i = thelist.size() + 1; 				             	        // force break
-					}
-				}
-			}
-
-
-			if (thelist == thePhoneLibraryList) {                                                   
-
-				cost = (thephonelibrary.getCity() + " " + thephonelibrary.getStreet() + thephonelibrary   
-						.getHousenumber());                                                    
-			}
 		}
 
 		URL = "http://wordnetweb.princeton.edu/perl/webwn?o2=&o0=1&o8=1&o1=1&o7=&o5=&o9=&o6=&o3=&o4=&s="
@@ -1774,9 +1497,8 @@ public class Reasoner {
 			if (theRecentThing.get(0).getClass().getSimpleName()
 					.toLowerCase().equals("customer")) {                
 
-				Customer curmem = (Customer) theRecentThing.get(0);       
-				description = (curmem.getCity() + " " + curmem.getStreet() + " " + curmem   
-						.getHousenumber());                                     
+				       
+				description = "a ordinary customer";                                     
 
 			}
 
@@ -1785,8 +1507,7 @@ public class Reasoner {
 			if (theRecentThing.get(0).getClass().getSimpleName()    
 					.toLowerCase().equals("phonelibrary")) {                   
 
-				description = (thephonelibrary.getCity() + " " + thephonelibrary.getStreet() + thephonelibrary    
-						.getHousenumber());                                            
+				description = "the main phone store";                                            
 			}
 
 		}
@@ -1868,8 +1589,7 @@ public class Reasoner {
 
 			if (thelist == thePhoneLibraryList) {                                                   
 
-				description = (thephonelibrary.getCity() + " " + thephonelibrary.getStreet() + thephonelibrary   
-						.getHousenumber());                                                    
+				description = "the main phone store";                                                      
 			}
 		}
 
@@ -1898,7 +1618,7 @@ public class Reasoner {
 			Phone curphone = (Phone) thePhoneList.get(i);    // cast list element to Phone Class  												
 			System.out.println("Testing Phone" + " " + curphone.getPid());
 
-			if (curphone.getPid().equalsIgnoreCase("dostoyjewski")) {     // check for the author  
+			if (curphone.getPid().equalsIgnoreCase("001")) {     // check for the author  
 
 				answer = "Phone by : " + curphone.getPid() + "\n"   
 						+ " Phone Model: " + curphone.getBrand()       
