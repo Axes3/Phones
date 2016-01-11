@@ -296,6 +296,18 @@ public class Reasoner {
 			
 			}
 		}}
+		if(foundSubject==false){
+			for (int x = 0; x < tabletsyn.size(); x++) {    
+				if (input.contains(tabletsyn.get(x))) {     
+					classtype = theTabletList;              
+					foundSubject=true;
+					input = input.replace(tabletsyn.get(x), "<b>"+tabletsyn.get(x)+"</b>");
+					
+					subjectcounter = 1;
+					System.out.println("Class type Tablet recognised.");
+					
+				}
+			}}
 		
 		if(foundSubject==false){
 			for (int x = 0; x < reviewsyn.size(); x++) {    
@@ -336,18 +348,7 @@ public class Reasoner {
 			}
 		}}
 		
-		if(foundSubject==false){
-		for (int x = 0; x < tabletsyn.size(); x++) {    
-			if (input.contains(tabletsyn.get(x))) {     
-				classtype = theTabletList;              
-				foundSubject=true;
-				input = input.replace(tabletsyn.get(x), "<b>"+tabletsyn.get(x)+"</b>");
-				
-				subjectcounter = 1;
-				System.out.println("Class type Tablet recognised.");
-				
-			}
-		}}
+	
 		
 		if(subjectcounter == 0){
 			for (int x = 0; x < recentobjectsyn.size(); x++) {  
