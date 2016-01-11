@@ -131,13 +131,13 @@
 	<Review>
 		<reviewid>0001</reviewid>
 		<customerid>J_AV_25</customerid>
-		<post>this is a first review</post>
+		<post>Great device but it lacks angry birds</post>
 		<pid>001</pid>
 	</Review>
 	<Review>
 		<reviewid>0002</reviewid>
 		<customerid>J_AV_25</customerid>
-		<post>this is second review</post>
+		<post>Awesome device but needs more clash of clans</post>
 		<pid>003</pid>
 	</Review>
 

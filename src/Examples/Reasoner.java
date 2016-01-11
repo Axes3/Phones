@@ -818,7 +818,7 @@ public class Reasoner {
 
 		Vector<String> yesorno = new Vector<String>();
 		if (classtype.isEmpty()){
-			yesorno.add("Class not recognised. Please specify if you are searching for a phone,  customer, review, or stock?");
+			yesorno.add("Class not recognised. Please specify if you are searching for a phone or customer?");
 		} else {
 			yesorno.add("No we don't have such a "
 				+ classtype.get(0).getClass().getSimpleName());
@@ -837,7 +837,23 @@ public class Reasoner {
 						|| input.contains(curphone.getPid().toLowerCase())) {   
 
 					counter = i;
-					yesorno.set(0, "Yes we have such a Phone");                   
+					String message="Yes we have such a Phone:\n"+curphone.getName()+" from "+
+					curphone.getBrand()+" with: battery life-"+curphone.getBattery()+
+					"and capacity of "+curphone.getCapacity()+"and camera pixels-"+curphone.getCamerapixels()+
+					" and the colour "+curphone.getColour()+ " and the cost of "+curphone.getCost()+
+					" and the OS-"+curphone.getOs();
+					
+					boolean gotrev=false;
+					for (int j=0;j<theReviewList.size();j++)
+					{
+						Review theRev=(Review)theReviewList.get(j);
+						if (curphone.getPid().toLowerCase().equals(theRev.getPid().toLowerCase())){
+							message =message+ "<br/>Review no."+theRev.getReviewid()+": "+theRev.getPost()+"\n";
+							gotrev=true;
+							}
+					}
+					if (gotrev==false) message+= "<br/>No reviews yet";
+					yesorno.set(0, message);  
 					yesorno.add(counter.toString());
 					i = thelist.size() + 1; // force break
 				}
@@ -874,9 +890,24 @@ public class Reasoner {
 				if (input.contains(curtablet.getName().toLowerCase())             
 						|| input.contains(curtablet.getBrand().toLowerCase())       
 						|| input.contains(curtablet.getPid().toLowerCase())) {   
-
-					counter = i;
-					yesorno.set(0, "Yes we have such a Tablet");                   
+					
+					String message="Yes we have such a Phone:\n"+curtablet.getName()+" from "+
+							curtablet.getBrand()+" with: battery life-"+curtablet.getBattery()+
+							"and capacity of "+curtablet.getCapacity()+"and camera pixels-"+curtablet.getCamerapixels()+
+							" and the colour "+curtablet.getColour()+ " and the cost of "+curtablet.getCost()+
+							" and the OS-"+curtablet.getOs();
+					boolean gotrev=false;
+					for (int j=0;j<theReviewList.size();j++)
+					{
+						Review theRev=(Review)theReviewList.get(j);
+						if (curtablet.getPid().toLowerCase().equals(theRev.getPid().toLowerCase())){
+							message =message+ "<br/>Review no."+theRev.getReviewid()+": "+theRev.getPost()+"\n";
+							gotrev=true;
+							}
+					}
+					if (gotrev==false) message+= "<br/>No reviews yet";
+					yesorno.set(0, message);  
+					counter = i;                 
 					yesorno.add(counter.toString());
 					i = thelist.size() + 1; // force break
 				}
