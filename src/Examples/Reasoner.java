@@ -1620,8 +1620,8 @@ public class Reasoner {
 
 			if (curphone.getPid().equalsIgnoreCase("001")) {     // check for the author  
 
-				answer = "Phone by : " + curphone.getPid() + "\n"   
-						+ " Phone Model: " + curphone.getBrand()       
+				answer = "Phone by : " + curphone.getBrand() + "\n"   
+						+ " Phone Model: " + curphone.getName()       
 						+ ".";
 			}
 		}
